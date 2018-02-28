@@ -146,4 +146,11 @@ public class CalendrierLiturgiqueTest {
 		DateLiturgique date = CalendrierLiturgique.sainteTrinite(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MAY, 27));
 	}
+	
+	@Test
+	public void feteDieu() {
+		int annee = 2018;
+		DateLiturgique date = CalendrierLiturgique.feteDieu(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MAY, 31)); // ou visitation !!! 
+	}
 }

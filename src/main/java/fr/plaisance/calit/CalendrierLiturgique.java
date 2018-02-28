@@ -86,6 +86,13 @@ public class CalendrierLiturgique {
 		return Dimanche.of(date, "Sainte Trinité", Couleur.BLANC);
 	}
 	
+	public static DateLiturgique feteDieu(int annee) {
+		LocalDate date = datePaques(annee).plusDays(60);
+		return Fete.of(date, "Fête-Dieu", Couleur.BLANC, DayOfWeek.THURSDAY);
+	}
+	
+	// Visitation 31 mai
+	
 	private static int algorithmeDeGauss(int annee) {
 		final int a = annee % 19;
 		final int b = annee % 4;
