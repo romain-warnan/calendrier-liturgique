@@ -77,8 +77,13 @@ public class CalendrierLiturgique {
 	}
 	
 	public static DateLiturgique pentecote(int annee) {
-		LocalDate date = datePaques(annee).plusDays(49);
+		LocalDate date = datePaques(annee).plusWeeks(7);
 		return Dimanche.of(date, "Pentecôte", Couleur.ROUGE);
+	}
+	
+	public static DateLiturgique sainteTrinite(int annee) {
+		LocalDate date = datePaques(annee).plusWeeks(8);
+		return Dimanche.of(date, "Sainte Trinité", Couleur.BLANC);
 	}
 	
 	private static int algorithmeDeGauss(int annee) {
@@ -101,5 +106,4 @@ public class CalendrierLiturgique {
 		}
 		return 22 + d + e;
 	}
-
 }

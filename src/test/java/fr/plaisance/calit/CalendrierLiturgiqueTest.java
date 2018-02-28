@@ -139,4 +139,11 @@ public class CalendrierLiturgiqueTest {
 		DateLiturgique date = CalendrierLiturgique.pentecote(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MAY, 20));
 	}
+	
+	@Test
+	public void dimancheDeLaSainteTrinite() {
+		int annee = 2018;
+		DateLiturgique date = CalendrierLiturgique.sainteTrinite(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MAY, 27));
+	}
 }
