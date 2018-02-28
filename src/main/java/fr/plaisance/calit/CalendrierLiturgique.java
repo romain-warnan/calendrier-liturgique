@@ -1,13 +1,47 @@
 package fr.plaisance.calit;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 
+import fr.plaisance.calit.DateLiturgique.Couleur;
+
 public class CalendrierLiturgique {
 
-	public static LocalDate paques(int annee) {
+	public static DateLiturgique paques(int annee) {
 		int joursDeMars = algorithmeDeGauss(annee);
-		return LocalDate.of(annee, Month.MARCH, 1).plusDays(joursDeMars - 1);
+		LocalDate date = LocalDate.of(annee, Month.MARCH, 1).plusDays(joursDeMars - 1); 
+		return Dimanche.of(date, "Pâques", Couleur.BLANC);
+	}
+
+	public static DateLiturgique mercrediDesCendres(int annee) {
+		LocalDate date = paques(annee).date.minusDays(46);
+		return Fete.of(date, "Mercredi des cendres", Couleur.VIOLET, DayOfWeek.WEDNESDAY);
+	}
+
+	public static DateLiturgique premierDimancheDeCareme(int annee) {
+		LocalDate date = paques(annee).date.minusDays(42 - 7 * 0);
+		return Dimanche.of(date, "1er dimanche de Carême (Invocabit)", Couleur.VIOLET);
+	}
+	
+	public static DateLiturgique deuxiemeDimancheDeCareme(int annee) {
+		LocalDate date = paques(annee).date.minusDays(42 - 7 * 1);
+		return Dimanche.of(date, "2e dimanche de Carême (Reminiscere)", Couleur.VIOLET);
+	}
+	
+	public static DateLiturgique troisiemeDimancheDeCareme(int annee) {
+		LocalDate date = paques(annee).date.minusDays(42 - 7 * 2);
+		return Dimanche.of(date, "3e dimanche de Carême (Oculi)", Couleur.VIOLET);
+	}
+	
+	public static DateLiturgique quatriemeDimancheDeCareme(int annee) {
+		LocalDate date = paques(annee).date.minusDays(42 - 7 * 3);
+		return Dimanche.of(date, "4e dimanche de Carême (Lætare)", Couleur.ROSE);
+	}
+	
+	public static DateLiturgique cinquiemeDimancheDeCareme(int annee) {
+		LocalDate date = paques(annee).date.minusDays(42 - 7 * 4);
+		return Dimanche.of(date, "5e dimanche de Carême (Judica)", Couleur.VIOLET);
 	}
 	
 	private static int algorithmeDeGauss(int annee) {
