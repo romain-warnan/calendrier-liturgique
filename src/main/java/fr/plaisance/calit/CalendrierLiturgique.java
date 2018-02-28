@@ -111,6 +111,15 @@ public class CalendrierLiturgique {
 		return FeteFixe.of(date, annee, "Visitation", Couleur.BLANC);
 	}
 
+	// Nativité de St Jean-Baptiste 24 juin
+	// Saint Pierre et saint Paul 29 juin
+
+
+//	public static DateLiturgique transfiguration(int annee) {
+//		MonthDay date = MonthDay.of(Month.AUGUST, 6);
+//		return FeteFixe.of(date, annee, "Transfiguration", Couleur.BLANC);
+//	}
+
 	public static DateLiturgique assomption(int annee) {
 		MonthDay date = MonthDay.of(Month.AUGUST, 15);
 		return FeteFixe.of(date, annee, "Assomption", Couleur.BLANC);
