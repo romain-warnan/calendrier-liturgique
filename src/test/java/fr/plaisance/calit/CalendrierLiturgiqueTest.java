@@ -132,4 +132,11 @@ public class CalendrierLiturgiqueTest {
 		DateLiturgique date = CalendrierLiturgique.ascension(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MAY, 10));
 	}
+	
+	@Test
+	public void pentecote() {
+		int annee = 2018;
+		DateLiturgique date = CalendrierLiturgique.pentecote(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MAY, 20));
+	}
 }

@@ -76,6 +76,11 @@ public class CalendrierLiturgique {
 		return Fete.of(date, "Ascension", Couleur.BLANC, DayOfWeek.THURSDAY);
 	}
 	
+	public static DateLiturgique pentecote(int annee) {
+		LocalDate date = datePaques(annee).plusDays(49);
+		return Dimanche.of(date, "Pentecôte", Couleur.ROUGE);
+	}
+	
 	private static int algorithmeDeGauss(int annee) {
 		final int a = annee % 19;
 		final int b = annee % 4;
