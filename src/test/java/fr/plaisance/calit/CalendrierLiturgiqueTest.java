@@ -54,47 +54,75 @@ public class CalendrierLiturgiqueTest {
 	@Test
 	public void devraitRetournerLaDateDuMercrediDesCendres2018() {
 		int annee = 2018;
-		DateLiturgique mercrediDesCendres = CalendrierLiturgique.mercrediDesCendres(annee);
+		DateLiturgique mercrediDesCendres = CalendrierLiturgique.cendres(annee);
 		assertThat(mercrediDesCendres.date).isEqualTo(LocalDate.of(annee, Month.FEBRUARY, 14));
 	}
 
 	@Test
 	public void devraitRetournerInvocabit() {
 		int annee = 2018;
-		DateLiturgique invocabit = CalendrierLiturgique.premierDimancheDeCareme(annee);
-		assertThat(invocabit.date).isEqualTo(LocalDate.of(annee, Month.FEBRUARY, 18));
-		assertThat(invocabit.libelle).containsIgnoringCase("invocabit");
+		DateLiturgique date = CalendrierLiturgique.premierDimancheDeCareme(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.FEBRUARY, 18));
+		assertThat(date.libelle).containsIgnoringCase("invocabit");
 	}
 
 	@Test
 	public void devraitRetournerReminiscere() {
 		int annee = 2018;
-		DateLiturgique invocabit = CalendrierLiturgique.deuxiemeDimancheDeCareme(annee);
-		assertThat(invocabit.date).isEqualTo(LocalDate.of(annee, Month.FEBRUARY, 25));
-		assertThat(invocabit.libelle).containsIgnoringCase("reminiscere");
+		DateLiturgique date = CalendrierLiturgique.deuxiemeDimancheDeCareme(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.FEBRUARY, 25));
+		assertThat(date.libelle).containsIgnoringCase("reminiscere");
 	}
 
 	@Test
 	public void devraitRetournerOculi() {
 		int annee = 2018;
-		DateLiturgique invocabit = CalendrierLiturgique.troisiemeDimancheDeCareme(annee);
-		assertThat(invocabit.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 4));
-		assertThat(invocabit.libelle).containsIgnoringCase("oculi");
+		DateLiturgique date = CalendrierLiturgique.troisiemeDimancheDeCareme(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 4));
+		assertThat(date.libelle).containsIgnoringCase("oculi");
 	}
 
 	@Test
 	public void devraitRetournerLaetare() {
 		int annee = 2018;
-		DateLiturgique invocabit = CalendrierLiturgique.quatriemeDimancheDeCareme(annee);
-		assertThat(invocabit.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 11));
-		assertThat(invocabit.libelle).containsIgnoringCase("lætare");
+		DateLiturgique date = CalendrierLiturgique.quatriemeDimancheDeCareme(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 11));
+		assertThat(date.libelle).containsIgnoringCase("lætare");
 	}
 
 	@Test
 	public void devraitRetournerJudica() {
 		int annee = 2018;
-		DateLiturgique invocabit = CalendrierLiturgique.cinquiemeDimancheDeCareme(annee);
-		assertThat(invocabit.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 18));
-		assertThat(invocabit.libelle).containsIgnoringCase("judica");
+		DateLiturgique date = CalendrierLiturgique.cinquiemeDimancheDeCareme(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 18));
+		assertThat(date.libelle).containsIgnoringCase("judica");
+	}
+	
+	@Test
+	public void devraitRetournerLeDimancheDesRameaux() {
+		int annee = 2018;
+		DateLiturgique date = CalendrierLiturgique.rameaux(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 25));
+	}
+	
+	@Test
+	public void devraitRetournerLeJeudiSaint() {
+		int annee = 2018;
+		DateLiturgique date = CalendrierLiturgique.jeudiSaint(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 29));
+	}
+	
+	@Test
+	public void devraitRetournerLeVendrediSaint() {
+		int annee = 2018;
+		DateLiturgique date = CalendrierLiturgique.vendrediSaint(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 30));
+	}
+	
+	@Test
+	public void devraitRetournerLeSamediSaint() {
+		int annee = 2018;
+		DateLiturgique date = CalendrierLiturgique.samediSaint(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 31));
 	}
 }

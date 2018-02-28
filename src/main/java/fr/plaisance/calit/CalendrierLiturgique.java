@@ -14,34 +14,57 @@ public class CalendrierLiturgique {
 		return Dimanche.of(date, "Pâques", Couleur.BLANC);
 	}
 
-	public static DateLiturgique mercrediDesCendres(int annee) {
-		LocalDate date = paques(annee).date.minusDays(46);
+	public static DateLiturgique cendres(int annee) {
+		LocalDate date = paques(annee).date.minusWeeks(6).minusDays(4);
 		return Fete.of(date, "Mercredi des cendres", Couleur.VIOLET, DayOfWeek.WEDNESDAY);
 	}
 
 	public static DateLiturgique premierDimancheDeCareme(int annee) {
-		LocalDate date = paques(annee).date.minusDays(42 - 7 * 0);
+		LocalDate date = paques(annee).date.minusWeeks(6);
 		return Dimanche.of(date, "1er dimanche de Carême (Invocabit)", Couleur.VIOLET);
 	}
 	
 	public static DateLiturgique deuxiemeDimancheDeCareme(int annee) {
-		LocalDate date = paques(annee).date.minusDays(42 - 7 * 1);
+		LocalDate date = paques(annee).date.minusWeeks(5);
 		return Dimanche.of(date, "2e dimanche de Carême (Reminiscere)", Couleur.VIOLET);
 	}
 	
 	public static DateLiturgique troisiemeDimancheDeCareme(int annee) {
-		LocalDate date = paques(annee).date.minusDays(42 - 7 * 2);
+		LocalDate date = paques(annee).date.minusWeeks(4);
 		return Dimanche.of(date, "3e dimanche de Carême (Oculi)", Couleur.VIOLET);
 	}
 	
 	public static DateLiturgique quatriemeDimancheDeCareme(int annee) {
-		LocalDate date = paques(annee).date.minusDays(42 - 7 * 3);
+		LocalDate date = paques(annee).date.minusWeeks(3);
 		return Dimanche.of(date, "4e dimanche de Carême (Lætare)", Couleur.ROSE);
 	}
 	
 	public static DateLiturgique cinquiemeDimancheDeCareme(int annee) {
-		LocalDate date = paques(annee).date.minusDays(42 - 7 * 4);
+		LocalDate date = paques(annee).date.minusWeeks(2);
 		return Dimanche.of(date, "5e dimanche de Carême (Judica)", Couleur.VIOLET);
+	}
+
+	public static DateLiturgique rameaux(int annee) {
+		LocalDate date = paques(annee).date.minusWeeks(1);
+		return Dimanche.of(date, "Dimanche de la Passion et des Rameaux", Couleur.ROUGE);
+	}
+
+
+	public static DateLiturgique jeudiSaint(int annee) {
+		LocalDate date = paques(annee).date.minusDays(3);
+		return Fete.of(date, "Jeudi Saint", Couleur.BLANC, DayOfWeek.THURSDAY);
+	}
+	
+
+	public static DateLiturgique vendrediSaint(int annee) {
+		LocalDate date = paques(annee).date.minusDays(2);
+		return Fete.of(date, "Vendredi Saint", Couleur.ROUGE, DayOfWeek.FRIDAY);
+	}
+	
+
+	public static DateLiturgique samediSaint(int annee) {
+		LocalDate date = paques(annee).date.minusDays(1);
+		return Fete.of(date, "Samedi Saint", Couleur.VIOLET, DayOfWeek.SATURDAY);
 	}
 	
 	private static int algorithmeDeGauss(int annee) {
