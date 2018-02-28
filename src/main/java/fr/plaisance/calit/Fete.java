@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 public class Fete extends DateLiturgique {
 
-	private Fete(LocalDate date, String libelle, Couleur couleur) {
+	Fete(LocalDate date, String libelle, Couleur couleur) {
 		super(date, libelle, couleur);
 	}
 	
@@ -17,7 +17,7 @@ public class Fete extends DateLiturgique {
 	static DateLiturgique of(LocalDate date, String libelle, Couleur couleur) {
 		return new Fete(date, libelle, couleur);
 	}
-	
+
 	static DateLiturgique of(LocalDate date, String libelle, Couleur couleur, DayOfWeek expected) {
 		return new Fete(date, libelle, couleur, expected);
 	}

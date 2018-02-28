@@ -1,11 +1,11 @@
 package fr.plaisance.calit;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.Test;
 
 import java.time.LocalDate;
 import java.time.Month;
 
-import org.junit.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class CalendrierLiturgiqueTest {
 
@@ -87,7 +87,7 @@ public class CalendrierLiturgiqueTest {
 		int annee = 2018;
 		DateLiturgique date = CalendrierLiturgique.quatriemeDimancheDeCareme(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 11));
-		assertThat(date.libelle).containsIgnoringCase("lætare");
+		assertThat(date.libelle).containsIgnoringCase("lÃ¦tare");
 	}
 
 	@Test
@@ -151,6 +151,6 @@ public class CalendrierLiturgiqueTest {
 	public void feteDieu() {
 		int annee = 2018;
 		DateLiturgique date = CalendrierLiturgique.feteDieu(annee);
-		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MAY, 31)); // ou visitation !!! 
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.JUNE, 3));
 	}
 }
