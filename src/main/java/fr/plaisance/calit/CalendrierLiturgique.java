@@ -70,6 +70,11 @@ public class CalendrierLiturgique {
 		LocalDate date = datePaques(annee).minusDays(1);
 		return Fete.of(date, "Samedi Saint", Couleur.VIOLET, DayOfWeek.SATURDAY);
 	}
+
+	public static DateLiturgique ascension(int annee) {
+		LocalDate date = datePaques(annee).plusDays(39);
+		return Fete.of(date, "Ascension", Couleur.BLANC, DayOfWeek.THURSDAY);
+	}
 	
 	private static int algorithmeDeGauss(int annee) {
 		final int a = annee % 19;
@@ -91,4 +96,5 @@ public class CalendrierLiturgique {
 		}
 		return 22 + d + e;
 	}
+
 }

@@ -125,4 +125,11 @@ public class CalendrierLiturgiqueTest {
 		DateLiturgique date = CalendrierLiturgique.samediSaint(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 31));
 	}
+	
+	@Test
+	public void ascension() {
+		int annee = 2018;
+		DateLiturgique date = CalendrierLiturgique.ascension(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MAY, 10));
+	}
 }
