@@ -160,4 +160,11 @@ public class CalendrierLiturgiqueTest {
 		DateLiturgique date = CalendrierLiturgique.sacreCoeur(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.JUNE, 8));
 	}
+
+	@Test
+	public void christRoi() {
+		int annee = 2018;
+		DateLiturgique date = CalendrierLiturgique.christRoi(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.OCTOBER, 28));
+	}
 }

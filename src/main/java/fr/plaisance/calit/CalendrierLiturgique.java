@@ -6,6 +6,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.MonthDay;
+import java.time.temporal.TemporalAdjusters;
 
 public class CalendrierLiturgique {
 
@@ -97,11 +98,33 @@ public class CalendrierLiturgique {
 		return Fete.of(date, "Sacré-Cœur", Couleur.BLANC, DayOfWeek.FRIDAY);
 	}
 
+	public static DateLiturgique christRoi(int annee) {
+		LocalDate toussaint = toussaints(annee).date;
+		LocalDate date = toussaint.with(TemporalAdjusters.previous(DayOfWeek.SUNDAY));
+		return Dimanche.of(date, "Christ Roi", Couleur.BLANC);
+	}
+
 	// Fêtes fixes
 
 	public static DateLiturgique visitation(int annee) {
 		MonthDay date = MonthDay.of(Month.MAY, 31);
 		return FeteFixe.of(date, annee, "Visitation", Couleur.BLANC);
+	}
+
+	public static DateLiturgique assomption(int annee) {
+		MonthDay date = MonthDay.of(Month.AUGUST, 15);
+		return FeteFixe.of(date, annee, "Assomption", Couleur.BLANC);
+	}
+
+	public static DateLiturgique toussaints(int annee) {
+		MonthDay date = MonthDay.of(Month.NOVEMBER, 1);
+		return FeteFixe.of(date, annee, "Toussaint", Couleur.BLANC);
+
+	}
+
+	public static DateLiturgique jourDesMorts(int annee) {
+		MonthDay date = MonthDay.of(Month.NOVEMBER, 2);
+		return FeteFixe.of(date, annee, "Jour des Morts", Couleur.VIOLET);
 	}
 
 	// Visitation 31 mai
