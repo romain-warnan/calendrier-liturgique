@@ -10,56 +10,56 @@ import org.junit.Test;
 public class CalendrierLiturgiqueTest {
 
 	@Test
-	public void devraitRetournerLaDateDePaque2019() {
+	public void paques2019() {
 		int annee = 2019;
 		DateLiturgique paques = CalendrierLiturgique.paques(annee);
 		assertThat(paques.date).isEqualTo(LocalDate.of(annee, Month.APRIL, 21));
 	}
 
 	@Test
-	public void devraitRetournerLaDateDePaque2030() {
+	public void paques2030() {
 		int annee = 2030;
 		DateLiturgique paques = CalendrierLiturgique.paques(annee);
 		assertThat(paques.date).isEqualTo(LocalDate.of(annee, Month.APRIL, 21));
 	}
 
 	@Test
-	public void devraitRetournerLaDateDePaque2100() {
+	public void paques2100() {
 		int annee = 2100;
 		DateLiturgique paques = CalendrierLiturgique.paques(annee);
 		assertThat(paques.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 28));
 	}
 
 	@Test
-	public void devraitRetournerLaDateDePaque2001() {
+	public void paques2001() {
 		int annee = 2001;
 		DateLiturgique paques = CalendrierLiturgique.paques(annee);
 		assertThat(paques.date).isEqualTo(LocalDate.of(annee, Month.APRIL, 15));
 	}
 
 	@Test
-	public void devraitRetournerLaDateDePaque2055() {
+	public void paques2055() {
 		int annee = 2055;
 		DateLiturgique paques = CalendrierLiturgique.paques(annee);
 		assertThat(paques.date).isEqualTo(LocalDate.of(annee, Month.APRIL, 18));
 	}
 
 	@Test
-	public void devraitRetournerLaDateDePaque2076() {
+	public void paques2076() {
 		int annee = 2076;
 		DateLiturgique paques = CalendrierLiturgique.paques(annee);
 		assertThat(paques.date).isEqualTo(LocalDate.of(annee, Month.APRIL, 19));
 	}
 
 	@Test
-	public void devraitRetournerLaDateDuMercrediDesCendres2018() {
+	public void mercrediDesCendres() {
 		int annee = 2018;
 		DateLiturgique mercrediDesCendres = CalendrierLiturgique.cendres(annee);
 		assertThat(mercrediDesCendres.date).isEqualTo(LocalDate.of(annee, Month.FEBRUARY, 14));
 	}
 
 	@Test
-	public void devraitRetournerInvocabit() {
+	public void invocabit() {
 		int annee = 2018;
 		DateLiturgique date = CalendrierLiturgique.premierDimancheDeCareme(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.FEBRUARY, 18));
@@ -67,7 +67,7 @@ public class CalendrierLiturgiqueTest {
 	}
 
 	@Test
-	public void devraitRetournerReminiscere() {
+	public void reminiscere() {
 		int annee = 2018;
 		DateLiturgique date = CalendrierLiturgique.deuxiemeDimancheDeCareme(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.FEBRUARY, 25));
@@ -75,7 +75,7 @@ public class CalendrierLiturgiqueTest {
 	}
 
 	@Test
-	public void devraitRetournerOculi() {
+	public void oculi() {
 		int annee = 2018;
 		DateLiturgique date = CalendrierLiturgique.troisiemeDimancheDeCareme(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 4));
@@ -83,7 +83,7 @@ public class CalendrierLiturgiqueTest {
 	}
 
 	@Test
-	public void devraitRetournerLaetare() {
+	public void laetare() {
 		int annee = 2018;
 		DateLiturgique date = CalendrierLiturgique.quatriemeDimancheDeCareme(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 11));
@@ -91,7 +91,7 @@ public class CalendrierLiturgiqueTest {
 	}
 
 	@Test
-	public void devraitRetournerJudica() {
+	public void judica() {
 		int annee = 2018;
 		DateLiturgique date = CalendrierLiturgique.cinquiemeDimancheDeCareme(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 18));
@@ -99,28 +99,28 @@ public class CalendrierLiturgiqueTest {
 	}
 	
 	@Test
-	public void devraitRetournerLeDimancheDesRameaux() {
+	public void dimancheDesRameaux() {
 		int annee = 2018;
 		DateLiturgique date = CalendrierLiturgique.rameaux(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 25));
 	}
 	
 	@Test
-	public void devraitRetournerLeJeudiSaint() {
+	public void jeudiSaint() {
 		int annee = 2018;
 		DateLiturgique date = CalendrierLiturgique.jeudiSaint(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 29));
 	}
 	
 	@Test
-	public void devraitRetournerLeVendrediSaint() {
+	public void vendrediSaint() {
 		int annee = 2018;
 		DateLiturgique date = CalendrierLiturgique.vendrediSaint(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 30));
 	}
 	
 	@Test
-	public void devraitRetournerLeSamediSaint() {
+	public void samediSaint() {
 		int annee = 2018;
 		DateLiturgique date = CalendrierLiturgique.samediSaint(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 31));
