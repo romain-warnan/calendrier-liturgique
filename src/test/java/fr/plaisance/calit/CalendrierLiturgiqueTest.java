@@ -153,4 +153,11 @@ public class CalendrierLiturgiqueTest {
 		DateLiturgique date = CalendrierLiturgique.feteDieu(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.JUNE, 3));
 	}
+
+	@Test
+	public void sacreCoeur() {
+		int annee = 2018;
+		DateLiturgique date = CalendrierLiturgique.sacreCoeur(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.JUNE, 8));
+	}
 }

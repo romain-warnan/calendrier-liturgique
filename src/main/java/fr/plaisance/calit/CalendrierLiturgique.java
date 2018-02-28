@@ -92,6 +92,11 @@ public class CalendrierLiturgique {
 		return Dimanche.of(date, "Fête-Dieu", Couleur.BLANC);
 	}
 
+	public static DateLiturgique sacreCoeur(int annee) {
+		LocalDate date = datePaques(annee).plusWeeks(9).plusDays(5);
+		return Fete.of(date, "Sacré-Cœur", Couleur.BLANC, DayOfWeek.FRIDAY);
+	}
+
 	// Fêtes fixes
 
 	public static DateLiturgique visitation(int annee) {
