@@ -230,4 +230,11 @@ public class CalendrierLiturgiqueTest {
 		DateLiturgique date = CalendrierLiturgique.baptmemeDuSeigneur(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.JANUARY, 8));
 	}
+
+	@Test
+	public void presentationAuTemple() {
+		int annee = 2018;
+		DateLiturgique date = CalendrierLiturgique.presentationAuTemple(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.FEBRUARY, 2));
+	}
 }
