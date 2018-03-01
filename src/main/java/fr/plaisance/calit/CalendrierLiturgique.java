@@ -1,12 +1,12 @@
 package fr.plaisance.calit;
 
+import fr.plaisance.calit.DateLiturgique.Couleur;
+
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.MonthDay;
 import java.time.temporal.TemporalAdjusters;
-
-import fr.plaisance.calit.DateLiturgique.Couleur;
 
 public class CalendrierLiturgique {
 
@@ -141,7 +141,12 @@ public class CalendrierLiturgique {
 		return Fete.of(date, "Sainte Famille", Couleur.BLANC);
 		
 	}
-	
+
+	public static DateLiturgique epiphanie(int annee) {
+		LocalDate date = LocalDate.of(annee, Month.JANUARY, 1).with(TemporalAdjusters.next(DayOfWeek.SUNDAY));
+		return Dimanche.of(date, "Épiphanie", Couleur.BLANC);
+	}
+
 	// Fêtes fixes
 
 	// Immaculée conception : 8 décembre (sauf si dimanche de l'Avent : 9 déembre) 
@@ -159,6 +164,11 @@ public class CalendrierLiturgique {
 //		MonthDay date = MonthDay.of(Month.AUGUST, 6);
 //		return FeteFixe.of(date, annee, "Transfiguration", Couleur.BLANC);
 //	}
+
+	public static DateLiturgique sainteMarieMereDeDieu(int annee) {
+		MonthDay date = MonthDay.of(Month.JANUARY, 1);
+		return FeteFixe.of(date, annee, "Sainte Marie Mère de Dieu", Couleur.BLANC);
+	}
 
 	public static DateLiturgique assomption(int annee) {
 		MonthDay date = MonthDay.of(Month.AUGUST, 15);

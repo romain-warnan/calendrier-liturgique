@@ -210,11 +210,17 @@ public class CalendrierLiturgiqueTest {
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.DECEMBER, 31));
 	}
 	
-	
 	@Test
 	public void sainteFamille2022() {
 		int annee = 2022;
 		DateLiturgique date = CalendrierLiturgique.sainteFamille(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.DECEMBER, 30));
+	}
+
+	@Test
+	public void epiphanie() {
+		int annee = 2018;
+		DateLiturgique date = CalendrierLiturgique.epiphanie(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.JANUARY, 7));
 	}
 }
