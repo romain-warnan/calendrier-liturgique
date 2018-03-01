@@ -104,6 +104,11 @@ public class CalendrierLiturgique {
 		return Dimanche.of(date, "Christ Roi", Couleur.BLANC);
 	}
 	
+	public static DateLiturgique christRoiUnivers(int annee) {
+		LocalDate date = dateQuatriemeDimancheAvent(annee).minusWeeks(4);
+		return Dimanche.of(date, "Christ Roi de l’Univers", Couleur.BLANC);
+	}
+	
 	private static LocalDate dateQuatriemeDimancheAvent(int annee) {
 		LocalDate noel = noel(annee).date;
 		return noel.with(TemporalAdjusters.previous(DayOfWeek.SUNDAY));

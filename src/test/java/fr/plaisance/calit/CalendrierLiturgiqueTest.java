@@ -169,6 +169,13 @@ public class CalendrierLiturgiqueTest {
 	}
 
 	@Test
+	public void christRoiUnivers() {
+		int annee = 2017;
+		DateLiturgique date = CalendrierLiturgique.christRoiUnivers(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.NOVEMBER, 26));
+	}
+	
+	@Test
 	public void levavi() {
 		int annee = 2017;
 		DateLiturgique date = CalendrierLiturgique.premierDimancheAvent(annee);
