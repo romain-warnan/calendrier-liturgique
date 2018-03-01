@@ -8,6 +8,8 @@ import java.time.Month;
 import java.time.MonthDay;
 import java.time.temporal.TemporalAdjusters;
 
+// https://github.com/ical4j/ical4j
+// https://github.com/ical4j/ical4j/wiki/Examples#Creating_a_new_calendar
 public class CalendrierLiturgique {
 
 	public static DateLiturgique paques(int annee) {
