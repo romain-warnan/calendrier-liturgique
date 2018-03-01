@@ -21,7 +21,7 @@ public abstract class DateLiturgique {
 	protected static void verifierJourDeLaSemaine(DayOfWeek expected, LocalDate date) {
 		DayOfWeek actual = date.getDayOfWeek();
 		if (expected != actual) {
-			throw new JourDeLaSemaineException(expected, actual);
+			throw new MauvaisJourException(expected, actual);
 		}
 	}
 }
