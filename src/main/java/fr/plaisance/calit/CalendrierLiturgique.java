@@ -131,6 +131,8 @@ public class CalendrierLiturgique {
 	
 	// Fêtes fixes
 
+	// Immaculée conception : 8 décembre (sauf si dimanche de l'Avent : 9 déembre) 
+	
 	public static DateLiturgique visitation(int annee) {
 		MonthDay date = MonthDay.of(Month.MAY, 31);
 		return FeteFixe.of(date, annee, "Visitation", Couleur.BLANC);
