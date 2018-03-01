@@ -202,4 +202,19 @@ public class CalendrierLiturgiqueTest {
 		DateLiturgique date = CalendrierLiturgique.quatriemeDimancheAvent(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.DECEMBER, 24));
 	}
+	
+	@Test
+	public void sainteFamille2017() {
+		int annee = 2017;
+		DateLiturgique date = CalendrierLiturgique.sainteFamille(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.DECEMBER, 31));
+	}
+	
+	
+	@Test
+	public void sainteFamille2022() {
+		int annee = 2022;
+		DateLiturgique date = CalendrierLiturgique.sainteFamille(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.DECEMBER, 30));
+	}
 }

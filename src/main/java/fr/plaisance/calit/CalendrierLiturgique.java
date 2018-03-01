@@ -1,12 +1,12 @@
 package fr.plaisance.calit;
 
-import fr.plaisance.calit.DateLiturgique.Couleur;
-
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.MonthDay;
 import java.time.temporal.TemporalAdjusters;
+
+import fr.plaisance.calit.DateLiturgique.Couleur;
 
 public class CalendrierLiturgique {
 
@@ -132,6 +132,14 @@ public class CalendrierLiturgique {
 	public static DateLiturgique quatriemeDimancheAvent(int annee) {
 		LocalDate date = dateQuatriemeDimancheAvent(annee);
 		return Dimanche.of(date, "4e dimanche de l’Avent (Rorate)", Couleur.VIOLET);
+	}
+	
+	public static DateLiturgique sainteFamille(int annee) {
+		LocalDate noel = noel(annee).date;
+		LocalDate dernierDimanche = LocalDate.of(annee, Month.DECEMBER, 1).with(TemporalAdjusters.lastInMonth(DayOfWeek.SUNDAY));
+		LocalDate date = noel.equals(dernierDimanche) ? MonthDay.of(Month.DECEMBER, 30).atYear(annee) : dernierDimanche;
+		return Fete.of(date, "Sainte Famille", Couleur.BLANC);
+		
 	}
 	
 	// Fêtes fixes
