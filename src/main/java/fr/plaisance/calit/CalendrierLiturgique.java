@@ -98,13 +98,13 @@ public class CalendrierLiturgique {
 		return Fete.of(date, "Sacré-Cœur", Couleur.BLANC, DayOfWeek.FRIDAY);
 	}
 
-	public static DateLiturgique christRoi(int annee) {
-		LocalDate toussaint = toussaints(annee).date;
-		LocalDate date = toussaint.with(TemporalAdjusters.previous(DayOfWeek.SUNDAY));
-		return Dimanche.of(date, "Christ Roi", Couleur.BLANC);
-	}
+//	public static DateLiturgique christRoi(int annee) {
+//		LocalDate toussaint = toussaints(annee).date;
+//		LocalDate date = toussaint.with(TemporalAdjusters.previous(DayOfWeek.SUNDAY));
+//		return Dimanche.of(date, "Christ Roi", Couleur.BLANC);
+//	}
 	
-	public static DateLiturgique christRoiUnivers(int annee) {
+	public static DateLiturgique christRoi(int annee) {
 		LocalDate date = dateQuatriemeDimancheAvent(annee).minusWeeks(4);
 		return Dimanche.of(date, "Christ Roi de l’Univers", Couleur.BLANC);
 	}
