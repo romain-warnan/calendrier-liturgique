@@ -167,4 +167,32 @@ public class CalendrierLiturgiqueTest {
 		DateLiturgique date = CalendrierLiturgique.christRoi(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.OCTOBER, 28));
 	}
+
+	@Test
+	public void levavi() {
+		int annee = 2017;
+		DateLiturgique date = CalendrierLiturgique.premierDimancheAvent(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.DECEMBER, 3));
+	}
+	
+	@Test
+	public void populusSion() {
+		int annee = 2017;
+		DateLiturgique date = CalendrierLiturgique.deuxiemeDimancheAvent(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.DECEMBER, 10));
+	}
+	
+	@Test
+	public void gaudete() {
+		int annee = 2017;
+		DateLiturgique date = CalendrierLiturgique.troisiemeDimancheAvent(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.DECEMBER, 17));
+	}
+	
+	@Test
+	public void rorate() {
+		int annee = 2017;
+		DateLiturgique date = CalendrierLiturgique.quatriemeDimancheAvent(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.DECEMBER, 24));
+	}
 }

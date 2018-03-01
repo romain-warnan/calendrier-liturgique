@@ -11,13 +11,13 @@ import java.time.temporal.TemporalAdjusters;
 public class CalendrierLiturgique {
 
 	public static DateLiturgique paques(int annee) {
-		int joursDeMars = algorithmeDeGauss(annee);
-		LocalDate date = LocalDate.of(annee, Month.MARCH, 1).plusDays(joursDeMars - 1); 
+		LocalDate date = datePaques(annee); 
 		return Dimanche.of(date, "Pâques", Couleur.BLANC);
 	}
 	
 	private static LocalDate datePaques(int annee) {
-		return paques(annee).date;
+		int joursDeMars = algorithmeDeGauss(annee);
+		return LocalDate.of(annee, Month.MARCH, 1).plusDays(joursDeMars - 1); 
 	}
 
 	public static DateLiturgique cendres(int annee) {
@@ -103,7 +103,32 @@ public class CalendrierLiturgique {
 		LocalDate date = toussaint.with(TemporalAdjusters.previous(DayOfWeek.SUNDAY));
 		return Dimanche.of(date, "Christ Roi", Couleur.BLANC);
 	}
+	
+	private static LocalDate dateQuatriemeDimancheAvent(int annee) {
+		LocalDate noel = noel(annee).date;
+		return noel.with(TemporalAdjusters.previous(DayOfWeek.SUNDAY));
+	}
 
+	public static DateLiturgique premierDimancheAvent(int annee) {
+		LocalDate date = dateQuatriemeDimancheAvent(annee).minusWeeks(3);
+		return Dimanche.of(date, "1er dimanche de l’Avent (Levavi)", Couleur.VIOLET);
+	}
+	
+	public static DateLiturgique deuxiemeDimancheAvent(int annee) {
+		LocalDate date = dateQuatriemeDimancheAvent(annee).minusWeeks(2);
+		return Dimanche.of(date, "2e dimanche de l’Avent (Populus Sion)", Couleur.VIOLET);
+	}
+	
+	public static DateLiturgique troisiemeDimancheAvent(int annee) {
+		LocalDate date = dateQuatriemeDimancheAvent(annee).minusWeeks(1);
+		return Dimanche.of(date, "3e dimanche de l’Avent (Gaudete)", Couleur.ROSE);
+	}
+	
+	public static DateLiturgique quatriemeDimancheAvent(int annee) {
+		LocalDate date = dateQuatriemeDimancheAvent(annee);
+		return Dimanche.of(date, "4e dimanche de l’Avent (Rorate)", Couleur.VIOLET);
+	}
+	
 	// Fêtes fixes
 
 	public static DateLiturgique visitation(int annee) {
@@ -135,6 +160,11 @@ public class CalendrierLiturgique {
 		MonthDay date = MonthDay.of(Month.NOVEMBER, 2);
 		return FeteFixe.of(date, annee, "Jour des Morts", Couleur.VIOLET);
 	}
+	
+	public static DateLiturgique noel(int annee) {
+		MonthDay date = MonthDay.of(Month.DECEMBER, 25);
+		return FeteFixe.of(date, annee, "Noël", Couleur.BLANC);
+	}
 
 	// Visitation 31 mai
 	
@@ -158,4 +188,5 @@ public class CalendrierLiturgique {
 		}
 		return 22 + d + e;
 	}
+
 }
