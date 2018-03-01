@@ -223,4 +223,11 @@ public class CalendrierLiturgiqueTest {
 		DateLiturgique date = CalendrierLiturgique.epiphanie(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.JANUARY, 7));
 	}
+
+	@Test
+	public void baptmemeDuSeigneur() {
+		int annee = 2018;
+		DateLiturgique date = CalendrierLiturgique.baptmemeDuSeigneur(annee);
+		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.JANUARY, 8));
+	}
 }

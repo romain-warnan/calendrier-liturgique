@@ -147,6 +147,11 @@ public class CalendrierLiturgique {
 		return Dimanche.of(date, "Épiphanie", Couleur.BLANC);
 	}
 
+	public static DateLiturgique baptmemeDuSeigneur(int annee) {
+		LocalDate date = epiphanie(annee).date.plusDays(1);
+		return Fete.of(date, "Baptême du Seigneur", Couleur.BLANC); // Fête
+	}
+
 	// Fêtes fixes
 
 	// Immaculée conception : 8 décembre (sauf si dimanche de l'Avent : 9 déembre) 
