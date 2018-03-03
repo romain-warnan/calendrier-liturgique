@@ -29,7 +29,7 @@ public class CalendrierLiturgique {
 
 	public static DateLiturgique premierDimancheDeCareme(int annee) {
 		LocalDate date = datePaques(annee).minusWeeks(6);
-		return Dimanche.of(date, "1ᵉʳ dimanche de Carême (\uD835\uDE10\uD835\uDE2F\uD835\uDE37\uD835\uDE30\uD835\uDE24\uD835\uDE22\uD835\uDE23\uD835\uDE2A\uD835\uDE35)", Couleur.VIOLET);
+		return Dimanche.of(date, "1ᵉʳ dimanche de Carême (Invocabit)", Couleur.VIOLET);
 	}
 	
 	public static DateLiturgique deuxiemeDimancheDeCareme(int annee) {
