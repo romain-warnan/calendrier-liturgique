@@ -6,10 +6,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.Month;
-import java.time.MonthDay;
+import java.time.*;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Properties;
 
@@ -167,6 +164,18 @@ public class CalendrierLiturgique {
 			date = date.plusDays(1);
 		}
 		return Fete.of(date, resourceBundle.getProperty("saint.joseph"), Couleur.BLANC);
+	}
+
+	public static DateLiturgique annonciation(int annee) {
+		LocalDate date = LocalDate.of(annee, Month.MARCH, 25);
+		LocalDate paques = datePaques(annee);
+		if(!paques.minusWeeks(1).isAfter(date) && !paques.isBefore(date)) {
+			date = paques.plusWeeks(1).plusDays(1);
+		}
+		else if(date.getDayOfWeek() == DayOfWeek.SUNDAY) {
+			date = date.plusDays(1);
+		}
+		return Fete.of(date, resourceBundle.getProperty("annonciation"), Couleur.BLANC);
 	}
 
 	public static DateLiturgique sainteFamille(int annee) {

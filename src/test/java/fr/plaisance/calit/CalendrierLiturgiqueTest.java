@@ -52,6 +52,34 @@ public class CalendrierLiturgiqueTest {
 	}
 
 	@Test
+	public void annonciation2012() {
+		int annee = 2012;
+		DateLiturgique annonciation = CalendrierLiturgique.annonciation(annee);
+		assertThat(annonciation.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 26));
+	}
+
+	@Test
+	public void annonciation2018() {
+		int annee = 2018;
+		DateLiturgique annonciation = CalendrierLiturgique.annonciation(annee);
+		assertThat(annonciation.date).isEqualTo(LocalDate.of(annee, Month.APRIL, 9));
+	}
+
+	@Test
+	public void annonciation2019() {
+		int annee = 2019;
+		DateLiturgique annonciation = CalendrierLiturgique.annonciation(annee);
+		assertThat(annonciation.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 25));
+	}
+
+	@Test
+	public void annonciation2024() {
+		int annee = 2024;
+		DateLiturgique annonciation = CalendrierLiturgique.annonciation(annee);
+		assertThat(annonciation.date).isEqualTo(LocalDate.of(annee, Month.APRIL, 8));
+	}
+
+	@Test
 	public void mercrediDesCendres() {
 		int annee = 2018;
 		DateLiturgique mercrediDesCendres = CalendrierLiturgique.cendres(annee);
