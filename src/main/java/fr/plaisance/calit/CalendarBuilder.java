@@ -19,9 +19,7 @@ public class CalendarBuilder {
 
 	public static void writeCalendar(String path) throws IOException {
 		List<DateLiturgique> dates = Arrays.asList(premierDimancheAvent(2018), troisiemeDimancheDeCareme(2018));
-		List<String> lines = calendarLines(dates);
-		lines.forEach(System.out::println);
-		Files.write(Paths.get(path), lines, StandardCharsets.UTF_8);
+		Files.write(Paths.get(path), calendarLines(dates), StandardCharsets.UTF_8);
 	}
 
 	private static List<String> calendarLines(List<DateLiturgique> dates) {
