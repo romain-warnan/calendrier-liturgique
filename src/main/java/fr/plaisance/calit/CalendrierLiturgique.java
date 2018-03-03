@@ -29,27 +29,27 @@ public class CalendrierLiturgique {
 
 	public static DateLiturgique premierDimancheDeCareme(int annee) {
 		LocalDate date = datePaques(annee).minusWeeks(6);
-		return Dimanche.of(date, "1er dimanche de Carême (Invocabit)", Couleur.VIOLET);
+		return Dimanche.of(date, "1ᵉʳ dimanche de Carême (\uD835\uDE10\uD835\uDE2F\uD835\uDE37\uD835\uDE30\uD835\uDE24\uD835\uDE22\uD835\uDE23\uD835\uDE2A\uD835\uDE35)", Couleur.VIOLET);
 	}
 	
 	public static DateLiturgique deuxiemeDimancheDeCareme(int annee) {
 		LocalDate date = datePaques(annee).minusWeeks(5);
-		return Dimanche.of(date, "2e dimanche de Carême (Reminiscere)", Couleur.VIOLET);
+		return Dimanche.of(date, "2ᵉ dimanche de Carême (Reminiscere)", Couleur.VIOLET);
 	}
 	
 	public static DateLiturgique troisiemeDimancheDeCareme(int annee) {
 		LocalDate date = datePaques(annee).minusWeeks(4);
-		return Dimanche.of(date, "3e dimanche de Carême (Oculi)", Couleur.VIOLET);
+		return Dimanche.of(date, "3ᵉ dimanche de Carême (Oculi)", Couleur.VIOLET);
 	}
 	
 	public static DateLiturgique quatriemeDimancheDeCareme(int annee) {
 		LocalDate date = datePaques(annee).minusWeeks(3);
-		return Dimanche.of(date, "4e dimanche de Carême (Lætare)", Couleur.ROSE);
+		return Dimanche.of(date, "4ᵉ dimanche de Carême (Lætare)", Couleur.ROSE);
 	}
 	
 	public static DateLiturgique cinquiemeDimancheDeCareme(int annee) {
 		LocalDate date = datePaques(annee).minusWeeks(2);
-		return Dimanche.of(date, "5e dimanche de Carême (Judica)", Couleur.VIOLET);
+		return Dimanche.of(date, "5ᵉ dimanche de Carême (Judica)", Couleur.VIOLET);
 	}
 
 	public static DateLiturgique rameaux(int annee) {
@@ -118,22 +118,22 @@ public class CalendrierLiturgique {
 
 	public static DateLiturgique premierDimancheAvent(int annee) {
 		LocalDate date = dateQuatriemeDimancheAvent(annee).minusWeeks(3);
-		return Dimanche.of(date, "1er dimanche de l’Avent (Levavi)", Couleur.VIOLET);
+		return Dimanche.of(date, "1ᵉʳ dimanche de l’Avent (Levavi)", Couleur.VIOLET);
 	}
 	
 	public static DateLiturgique deuxiemeDimancheAvent(int annee) {
 		LocalDate date = dateQuatriemeDimancheAvent(annee).minusWeeks(2);
-		return Dimanche.of(date, "2e dimanche de l’Avent (Populus Sion)", Couleur.VIOLET);
+		return Dimanche.of(date, "2ᵉ dimanche de l’Avent (Populus Sion)", Couleur.VIOLET);
 	}
 	
 	public static DateLiturgique troisiemeDimancheAvent(int annee) {
 		LocalDate date = dateQuatriemeDimancheAvent(annee).minusWeeks(1);
-		return Dimanche.of(date, "3e dimanche de l’Avent (Gaudete)", Couleur.ROSE);
+		return Dimanche.of(date, "3ᵉ dimanche de l’Avent (Gaudete)", Couleur.ROSE);
 	}
 	
 	public static DateLiturgique quatriemeDimancheAvent(int annee) {
 		LocalDate date = dateQuatriemeDimancheAvent(annee);
-		return Dimanche.of(date, "4e dimanche de l’Avent (Rorate)", Couleur.VIOLET);
+		return Dimanche.of(date, "4ᵉ dimanche de l’Avent (Rorate)", Couleur.VIOLET);
 	}
 	
 	public static DateLiturgique sainteFamille(int annee) {
