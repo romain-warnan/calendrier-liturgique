@@ -4,6 +4,8 @@ import fr.plaisance.calit.DateLiturgique.Couleur;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
@@ -17,15 +19,14 @@ public class CalendrierLiturgique {
 
 	private static Properties readProperties() {
 		String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
-		System.out.println("rootPath = " + rootPath);
 		String appConfigPath = rootPath + "app.properties";
-		Properties appProps = new Properties();
+		Properties properties = new Properties();
 		try {
-			appProps.load(new FileInputStream(appConfigPath));
+			properties.load(new InputStreamReader(new FileInputStream(appConfigPath), StandardCharsets.UTF_8));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return appProps;
+		return properties;
 	}
 
 	public static DateLiturgique paques(int annee) {
