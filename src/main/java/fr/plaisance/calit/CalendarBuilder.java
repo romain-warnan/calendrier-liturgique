@@ -8,17 +8,12 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
-import static fr.plaisance.calit.CalendrierLiturgique.premierDimancheAvent;
-import static fr.plaisance.calit.CalendrierLiturgique.troisiemeDimancheDeCareme;
-
 public class CalendarBuilder {
 
-	public static void writeCalendar(String path) throws IOException {
-		List<DateLiturgique> dates = Arrays.asList(premierDimancheAvent(2018), troisiemeDimancheDeCareme(2018));
+	public static void writeCalendar(String path, List<DateLiturgique> dates) throws IOException {
 		Files.write(Paths.get(path), calendarLines(dates), StandardCharsets.UTF_8);
 	}
 
