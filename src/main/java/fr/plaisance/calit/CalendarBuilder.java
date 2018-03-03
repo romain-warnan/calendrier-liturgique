@@ -1,44 +1,58 @@
 package fr.plaisance.calit;
 
-import net.fortuna.ical4j.model.Calendar;
-import net.fortuna.ical4j.model.Date;
-import net.fortuna.ical4j.model.component.VEvent;
-import net.fortuna.ical4j.model.property.CalScale;
-import net.fortuna.ical4j.model.property.ProdId;
-import net.fortuna.ical4j.model.property.Version;
-import net.fortuna.ical4j.util.RandomUidGenerator;
-import net.fortuna.ical4j.util.UidGenerator;
-
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 
-import static java.util.stream.Collectors.toCollection;
+import static fr.plaisance.calit.CalendrierLiturgique.premierDimancheAvent;
+import static fr.plaisance.calit.CalendrierLiturgique.troisiemeDimancheDeCareme;
 
 public class CalendarBuilder {
 
-	private static final UidGenerator uidGenerator = new RandomUidGenerator();
+	public static void writeCalendar(String path) throws IOException {
+		List<DateLiturgique> dates = Arrays.asList(premierDimancheAvent(2018), troisiemeDimancheDeCareme(2018));
+		List<String> lines = calendarLines(dates);
+		lines.forEach(System.out::println);
+		Files.write(Paths.get(path), lines, StandardCharsets.UTF_8);
+	}
 
-	public static Calendar build(List<DateLiturgique> dates) {
-		Calendar calendar = calendar();
+	private static List<String> calendarLines(List<DateLiturgique> dates) {
+		List<String> lines = new ArrayList<>();
+		lines.add("BEGIN:VCALENDAR");
+		lines.add("PRODID:-//Romain Warnan//SolennitÃ©s catholiques//FR");
+		lines.add("VERSION:2.0");
+		lines.add("CALSCALE:GREGORIAN");
 		dates.stream()
-			.map(CalendarBuilder::evenement)
-			.collect(toCollection(calendar::getComponents));
-		return calendar;
+			.map(CalendarBuilder::eventLines)
+			.forEach(lines::addAll);
+		lines.add("END:VCALENDAR");
+		return lines;
 	}
 
-	private static Calendar calendar() {
-		Calendar calendar = new Calendar();
-		calendar.getProperties().add(new ProdId("-//Romain Warnan//Solennités catholiques//FR"));
-		calendar.getProperties().add(Version.VERSION_2_0);
-		calendar.getProperties().add(CalScale.GREGORIAN);
-		return calendar;
+	private static List<String> eventLines(DateLiturgique dateLiturgique) {
+		List<String> lines = new ArrayList<>();
+		lines.add("BEGIN:VEVENT");
+		// lines.add("DTSTAMP:20180303T104326Z");
+		lines.add("DTSTART;VALUE=DATE:" + timestamp(dateLiturgique.date));
+		lines.add("SUMMARY:" + dateLiturgique.libelle);
+		lines.add("UID:" + generateUid());
+		lines.add("END:VEVENT");
+		return lines;
 	}
 
-	private static VEvent evenement(DateLiturgique date) {
-		long millis = date.date.atStartOfDay(ZoneId.systemDefault()).toInstant().toEpochMilli();
-		Date eventDate = new Date(millis);
-		VEvent event = new VEvent(eventDate, date.libelle);
-		event.getProperties().add(uidGenerator.generateUid());
-		return event;
+	private static String timestamp(LocalDate date) {
+		return date.atStartOfDay(ZoneId.systemDefault()).format(DateTimeFormatter.BASIC_ISO_DATE);
+	}
+
+	private static String generateUid() {
+		return UUID.randomUUID().toString();
 	}
 }
