@@ -61,7 +61,7 @@ public class CalendrierLiturgiqueTest {
 	@Test
 	public void invocabit() {
 		int annee = 2018;
-		DateLiturgique date = CalendrierLiturgique.premierDimancheDeCareme(annee);
+		DateLiturgique date = CalendrierLiturgique.premierDimancheCareme(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.FEBRUARY, 18));
 		assertThat(date.libelle).containsIgnoringCase("invocabit");
 	}
@@ -69,7 +69,7 @@ public class CalendrierLiturgiqueTest {
 	@Test
 	public void reminiscere() {
 		int annee = 2018;
-		DateLiturgique date = CalendrierLiturgique.deuxiemeDimancheDeCareme(annee);
+		DateLiturgique date = CalendrierLiturgique.deuxiemeDimancheCareme(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.FEBRUARY, 25));
 		assertThat(date.libelle).containsIgnoringCase("reminiscere");
 	}
@@ -77,7 +77,7 @@ public class CalendrierLiturgiqueTest {
 	@Test
 	public void oculi() {
 		int annee = 2018;
-		DateLiturgique date = CalendrierLiturgique.troisiemeDimancheDeCareme(annee);
+		DateLiturgique date = CalendrierLiturgique.troisiemeDimancheCareme(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 4));
 		assertThat(date.libelle).containsIgnoringCase("oculi");
 	}
@@ -85,7 +85,7 @@ public class CalendrierLiturgiqueTest {
 	@Test
 	public void laetare() {
 		int annee = 2018;
-		DateLiturgique date = CalendrierLiturgique.quatriemeDimancheDeCareme(annee);
+		DateLiturgique date = CalendrierLiturgique.quatriemeDimancheCareme(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 11));
 		assertThat(date.libelle).containsIgnoringCase("lætare");
 	}
@@ -93,7 +93,7 @@ public class CalendrierLiturgiqueTest {
 	@Test
 	public void judica() {
 		int annee = 2018;
-		DateLiturgique date = CalendrierLiturgique.cinquiemeDimancheDeCareme(annee);
+		DateLiturgique date = CalendrierLiturgique.cinquiemeDimancheCareme(annee);
 		assertThat(date.date).isEqualTo(LocalDate.of(annee, Month.MARCH, 18));
 		assertThat(date.libelle).containsIgnoringCase("judica");
 	}

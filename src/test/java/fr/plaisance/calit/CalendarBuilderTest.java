@@ -12,13 +12,23 @@ public class CalendarBuilderTest {
 
 	@Test
 	public void calendar() throws IOException {
+		int annee = 2018;
 		List<DateLiturgique> dates = Arrays.asList(
-			premierDimancheAvent(2018),
+			premierDimancheAvent(annee),
+			immaculeeConception(annee),
+			deuxiemeDimancheAvent(annee),
+			troisiemeDimancheAvent(annee),
+			quatriemeDimancheAvent(annee),
+			noel(annee),
+			sainteMarieMereDeDieu(annee),
+			epiphanie(annee),
+			premierDimancheCareme(annee),
+			deuxiemeDimancheCareme(annee),
+			troisiemeDimancheCareme(annee),
+			quatriemeDimancheCareme(annee),
+			cinquiemeDimancheCareme(annee),
 
-			deuxiemeDimancheAvent(2018),
-			troisiemeDimancheAvent(2018),
-			quatriemeDimancheAvent(2018),
-			troisiemeDimancheDeCareme(2018)
+			christRoi(annee)
 		);
 		CalendarBuilder.writeCalendar("C:/Users/Romain/Desktop/romain.ics", dates);
 	}
