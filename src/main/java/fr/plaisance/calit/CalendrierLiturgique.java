@@ -19,10 +19,10 @@ public class CalendrierLiturgique {
 
 	private static Properties readProperties() {
 		String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
-		String appConfigPath = rootPath + "app.properties";
+		String propertiesPath = rootPath + "app.properties";
 		Properties properties = new Properties();
 		try {
-			properties.load(new InputStreamReader(new FileInputStream(appConfigPath), StandardCharsets.UTF_8));
+			properties.load(new InputStreamReader(new FileInputStream(propertiesPath), StandardCharsets.UTF_8));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
