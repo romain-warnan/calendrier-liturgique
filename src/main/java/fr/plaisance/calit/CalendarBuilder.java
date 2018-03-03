@@ -35,6 +35,7 @@ public class CalendarBuilder {
 		lines.add("BEGIN:VEVENT");
 		lines.add("DTSTART;VALUE=DATE:" + timestamp(dateLiturgique.date));
 		lines.add("SUMMARY:" + dateLiturgique.libelle);
+		lines.add("TRANSP:TRANSPARENT");
 		lines.add("UID:" + generateUid());
 		lines.add("END:VEVENT");
 		return lines;
