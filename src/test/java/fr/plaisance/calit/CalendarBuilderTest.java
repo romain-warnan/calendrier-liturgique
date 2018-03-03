@@ -27,7 +27,12 @@ public class CalendarBuilderTest {
 			troisiemeDimancheCareme(annee),
 			quatriemeDimancheCareme(annee),
 			cinquiemeDimancheCareme(annee),
-
+			saintJoseph(annee),
+			jeudiSaint(annee),
+			vendrediSaint(annee),
+			samediSaint(annee),
+			paques(annee),
+			// annonciation
 			christRoi(annee)
 		);
 		CalendarBuilder.writeCalendar("C:/Users/Romain/Desktop/romain.ics", dates);

@@ -161,7 +161,6 @@ public class CalendrierLiturgique {
 		return Fete.of(date, resourceBundle.getProperty("immaculee.conception"), Couleur.BLANC);
 	}
 
-
 	public static DateLiturgique saintJoseph(int annee) {
 		LocalDate date = LocalDate.of(annee, Month.MARCH, 19);
 		if(date.getDayOfWeek() == DayOfWeek.SUNDAY) {
