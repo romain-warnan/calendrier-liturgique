@@ -14,20 +14,20 @@ public class CalendarBuilderTest {
 	public void calendar() throws IOException {
 		int annee = 2018;
 		List<DateLiturgique> solennites = Arrays.asList(
-			premierDimancheAvent(annee),
 			immaculeeConception(annee),
+			premierDimancheAvent(annee),
 			deuxiemeDimancheAvent(annee),
 			troisiemeDimancheAvent(annee),
 			quatriemeDimancheAvent(annee),
 			noel(annee),
 			sainteMarieMereDeDieu(annee),
 			epiphanie(annee),
+			saintJoseph(annee),
 			premierDimancheCareme(annee),
 			deuxiemeDimancheCareme(annee),
 			troisiemeDimancheCareme(annee),
 			quatriemeDimancheCareme(annee),
 			cinquiemeDimancheCareme(annee),
-			saintJoseph(annee),
 			jeudiSaint(annee),
 			vendrediSaint(annee),
 			samediSaint(annee),
@@ -38,9 +38,11 @@ public class CalendarBuilderTest {
 			sainteTrinite(annee),
 			feteDieu(annee),
 			sacreCoeur(annee),
-
+			nativiteStJeanBaptiste(annee),
+			assomption(annee),
+			toussaints(annee),
 			christRoi(annee)
 		);
-		CalendarBuilder.writeCalendar("C:/Users/Romain/Desktop/romain.ics", solennites);
+		CalendarBuilder.writeCalendar("docs/solennites-" + annee + ".ics", solennites);
 	}
 }
