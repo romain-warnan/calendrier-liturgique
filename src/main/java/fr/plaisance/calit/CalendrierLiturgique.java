@@ -204,16 +204,21 @@ public class CalendrierLiturgique {
 	}
 
 
-	// Immaculée conception : 8 décembre (sauf si dimanche de l'Avent : 9 déembre)
-
 	public static DateLiturgique visitation(int annee) {
 		MonthDay date = MonthDay.of(Month.MAY, 31);
 		return FeteFixe.of(date, annee, resourceBundle.getProperty("visitation"), Couleur.BLANC);
 	}
 
-	// Nativité de St Jean-Baptiste 24 juin
-	// Saint Pierre et saint Paul 29 juin
+    public static DateLiturgique nativiteStJeanBaptiste(int annee) {
+        MonthDay date = MonthDay.of(Month.JUNE, 24);
+        return FeteFixe.of(date, annee, resourceBundle.getProperty("nativite.de.saint.jean.baptiste"), Couleur.BLANC);
+    }
 
+
+    public static DateLiturgique saintsPierreEtPaul(int annee) {
+        MonthDay date = MonthDay.of(Month.JUNE, 29);
+        return FeteFixe.of(date, annee, resourceBundle.getProperty("saint.pierre.et.saint.paul"), Couleur.BLANC);
+    }
 
 //	public static DateLiturgique transfiguration(int annee) {
 //		MonthDay date = MonthDay.of(Month.AUGUST, 6);

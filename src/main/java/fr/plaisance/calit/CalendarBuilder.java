@@ -33,7 +33,6 @@ public class CalendarBuilder {
 	private static List<String> eventLines(DateLiturgique dateLiturgique) {
 		List<String> lines = new ArrayList<>();
 		lines.add("BEGIN:VEVENT");
-		// lines.add("DTSTAMP:20180303T104326Z");
 		lines.add("DTSTART;VALUE=DATE:" + timestamp(dateLiturgique.date));
 		lines.add("SUMMARY:" + dateLiturgique.libelle);
 		lines.add("UID:" + generateUid());

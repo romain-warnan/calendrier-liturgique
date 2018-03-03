@@ -32,7 +32,13 @@ public class CalendarBuilderTest {
 			vendrediSaint(annee),
 			samediSaint(annee),
 			paques(annee),
-			/*Solennité de l’Annonciation du Seigneur à Marie, le 25 mars. Est décalée au 26, si le 25 est un dimanche (ou le premier lundi qui suit le deuxième dimanche de Pâques si le 25 mars se situe pendant la Semaine Sainte).*/
+			annonciation(annee),
+			ascension(annee),
+			pentecote(annee),
+			sainteTrinite(annee),
+			feteDieu(annee),
+			sacreCoeur(annee),
+
 			christRoi(annee)
 		);
 		CalendarBuilder.writeCalendar("C:/Users/Romain/Desktop/romain.ics", solennites);
