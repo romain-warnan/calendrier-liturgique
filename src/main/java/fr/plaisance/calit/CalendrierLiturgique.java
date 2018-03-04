@@ -26,6 +26,25 @@ public class CalendrierLiturgique {
 		return properties;
 	}
 
+	private static boolean isBetween(LocalDate date, LocalDate start, LocalDate end) {
+		return !start.isAfter(date) && !end.isBefore(date);
+	}
+
+	private static boolean durantTriduumPascal(LocalDate date) {
+		LocalDate paques = datePaques(date.getYear());
+		return isBetween(date, paques.minusDays(2), paques);
+	}
+
+	private static boolean durantOctaveDePaques(LocalDate date) {
+		LocalDate paques = datePaques(date.getYear());
+		return isBetween(date, paques, paques.plusWeeks(1));
+	}
+
+	private static boolean durantSemaineSainte(LocalDate date) {
+		LocalDate paques = datePaques(date.getYear());
+		return isBetween(date, paques.minusWeeks(1), paques);
+	}
+
 	public static DateLiturgique paques(int annee) {
 		LocalDate date = datePaques(annee);
 		return Dimanche.of(date, resourceBundle.getProperty("paques"), Couleur.BLANC);
