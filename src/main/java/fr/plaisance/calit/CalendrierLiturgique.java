@@ -217,7 +217,7 @@ public class CalendrierLiturgique {
 
     public static DateLiturgique saintsPierreEtPaul(int annee) {
         MonthDay date = MonthDay.of(Month.JUNE, 29);
-        return FeteFixe.of(date, annee, resourceBundle.getProperty("saint.pierre.et.saint.paul"), Couleur.BLANC);
+        return FeteFixe.of(date, annee, resourceBundle.getProperty("pierre.paul"), Couleur.ROUGE);
     }
 
 //	public static DateLiturgique transfiguration(int annee) {
@@ -227,7 +227,7 @@ public class CalendrierLiturgique {
 
 	public static DateLiturgique sainteMarieMereDeDieu(int annee) {
 		MonthDay date = MonthDay.of(Month.JANUARY, 1);
-		return FeteFixe.of(date, annee, resourceBundle.getProperty("sainte.marie.mere.de.dieu"), Couleur.BLANC);
+		return FeteFixe.of(date, annee, resourceBundle.getProperty("sainte.marie"), Couleur.BLANC);
 	}
 
 	public static DateLiturgique assomption(int annee) {
