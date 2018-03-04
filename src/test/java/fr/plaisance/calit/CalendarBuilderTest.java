@@ -23,11 +23,13 @@ public class CalendarBuilderTest {
 			sainteMarieMereDeDieu(annee),
 			epiphanie(annee),
 			saintJoseph(annee),
+			cendres(annee),
 			premierDimancheCareme(annee),
 			deuxiemeDimancheCareme(annee),
 			troisiemeDimancheCareme(annee),
 			quatriemeDimancheCareme(annee),
 			cinquiemeDimancheCareme(annee),
+			rameaux(annee),
 			jeudiSaint(annee),
 			vendrediSaint(annee),
 			samediSaint(annee),
@@ -39,8 +41,10 @@ public class CalendarBuilderTest {
 			feteDieu(annee),
 			sacreCoeur(annee),
 			nativiteStJeanBaptiste(annee),
+			saintsPierreEtPaul(annee),
 			assomption(annee),
-			toussaints(annee),
+			toussaint(annee),
+			jourDesMorts(annee),
 			christRoi(annee)
 		);
 		CalendarBuilder.writeCalendar("docs/solennites-" + annee + ".ics", solennites);

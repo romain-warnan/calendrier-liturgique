@@ -134,7 +134,7 @@ public class CalendrierLiturgique {
 	}
 
 //	public static DateLiturgique christRoi(int annee) {
-//		LocalDate toussaint = toussaints(annee).date;
+//		LocalDate toussaint = toussaint(annee).date;
 //		LocalDate date = toussaint.with(TemporalAdjusters.previous(DayOfWeek.SUNDAY));
 //		return Dimanche.of(date, "Christ Roi", Couleur.BLANC);
 //	}
@@ -197,52 +197,18 @@ public class CalendrierLiturgique {
 		return Fete.of(date, resourceBundle.getProperty("annonciation"), Couleur.BLANC);
 	}
 
-	public static DateLiturgique sainteFamille(int annee) {
-		LocalDate noel = noel(annee).date;
-		LocalDate dernierDimanche = LocalDate.of(annee, Month.DECEMBER, 1).with(TemporalAdjusters.lastInMonth(DayOfWeek.SUNDAY));
-		LocalDate date = noel.equals(dernierDimanche) ? MonthDay.of(Month.DECEMBER, 30).atYear(annee) : dernierDimanche;
-		return Fete.of(date, resourceBundle.getProperty("sainte.famille"), Couleur.BLANC);
-
-	}
 
 	public static DateLiturgique epiphanie(int annee) {
 		LocalDate date = LocalDate.of(annee, Month.JANUARY, 1).with(TemporalAdjusters.next(DayOfWeek.SUNDAY));
 		return Dimanche.of(date, resourceBundle.getProperty("epiphanie"), Couleur.BLANC);
 	}
 
-	public static DateLiturgique baptmemeDuSeigneur(int annee) {
-		LocalDate date = epiphanie(annee).date.plusDays(1);
-		return Fete.of(date, resourceBundle.getProperty("bapteme.du.seigneur"), Couleur.BLANC); // Fête
-	}
-
-	// Fêtes fixes
-
-	public static DateLiturgique presentationAuTemple(int annee) {
-		MonthDay date = MonthDay.of(Month.FEBRUARY, 2);
-		return FeteFixe.of(date, annee, resourceBundle.getProperty("presentation.au.temple"), Couleur.BLANC); // Fête
-	}
-
-
-	public static DateLiturgique visitation(int annee) {
-		MonthDay date = MonthDay.of(Month.MAY, 31);
-		return FeteFixe.of(date, annee, resourceBundle.getProperty("visitation"), Couleur.BLANC);
-	}
 
     public static DateLiturgique nativiteStJeanBaptiste(int annee) {
         MonthDay date = MonthDay.of(Month.JUNE, 24);
         return FeteFixe.of(date, annee, resourceBundle.getProperty("nativite.de.saint.jean.baptiste"), Couleur.BLANC);
     }
 
-
-    public static DateLiturgique saintsPierreEtPaul(int annee) {
-        MonthDay date = MonthDay.of(Month.JUNE, 29);
-        return FeteFixe.of(date, annee, resourceBundle.getProperty("pierre.paul"), Couleur.ROUGE);
-    }
-
-//	public static DateLiturgique transfiguration(int annee) {
-//		MonthDay date = MonthDay.of(Month.AUGUST, 6);
-//		return FeteFixe.of(date, annee, "Transfiguration", Couleur.BLANC);
-//	}
 
 	public static DateLiturgique sainteMarieMereDeDieu(int annee) {
 		MonthDay date = MonthDay.of(Month.JANUARY, 1);
@@ -254,7 +220,7 @@ public class CalendrierLiturgique {
 		return FeteFixe.of(date, annee, resourceBundle.getProperty("assomption"), Couleur.BLANC);
 	}
 
-	public static DateLiturgique toussaints(int annee) {
+	public static DateLiturgique toussaint(int annee) {
 		MonthDay date = MonthDay.of(Month.NOVEMBER, 1);
 		return FeteFixe.of(date, annee, resourceBundle.getProperty("toussaint"), Couleur.BLANC);
 
@@ -264,14 +230,63 @@ public class CalendrierLiturgique {
 		MonthDay date = MonthDay.of(Month.NOVEMBER, 2);
 		return FeteFixe.of(date, annee, resourceBundle.getProperty("jour.des.morts"), Couleur.VIOLET);
 	}
-	
+
 	public static DateLiturgique noel(int annee) {
 		MonthDay date = MonthDay.of(Month.DECEMBER, 25);
 		return FeteFixe.of(date, annee, resourceBundle.getProperty("noel"), Couleur.BLANC);
 	}
 
-	// Visitation 31 mai
-	
+    public static DateLiturgique saintsPierreEtPaul(int annee) {
+        MonthDay date = MonthDay.of(Month.JUNE, 29);
+        return FeteFixe.of(date, annee, resourceBundle.getProperty("pierre.paul"), Couleur.ROUGE);
+    }
+
+    // Fêtes
+
+	// Fêtes mobiles
+	public static DateLiturgique sainteFamille(int annee) {
+		LocalDate noel = noel(annee).date;
+		LocalDate dernierDimanche = LocalDate.of(annee, Month.DECEMBER, 1).with(TemporalAdjusters.lastInMonth(DayOfWeek.SUNDAY));
+		LocalDate date = noel.equals(dernierDimanche) ? MonthDay.of(Month.DECEMBER, 30).atYear(annee) : dernierDimanche;
+		return Fete.of(date, resourceBundle.getProperty("sainte.famille"), Couleur.BLANC);
+	}
+
+	public static DateLiturgique baptemeDuSeigneur(int annee) {
+		LocalDate date = epiphanie(annee).date.plusDays(1);
+		return Fete.of(date, resourceBundle.getProperty("bapteme.du.seigneur"), Couleur.BLANC);
+	}
+
+	// Fêtes fixes
+	// du Seigneur
+	public static DateLiturgique presentationAuTemple(int annee) {
+		MonthDay date = MonthDay.of(Month.FEBRUARY, 2);
+		return FeteFixe.of(date, annee, resourceBundle.getProperty("presentation.au.temple"), Couleur.BLANC);
+	}
+
+	public static DateLiturgique transfiguration(int annee) {
+		MonthDay date = MonthDay.of(Month.AUGUST, 6);
+		return FeteFixe.of(date, annee, "Transfiguration", Couleur.BLANC);
+	}
+
+	// de la Vierge Marie
+	public static DateLiturgique visitation(int annee) {
+		MonthDay date = MonthDay.of(Month.MAY, 31);
+		DateLiturgique visitation = FeteFixe.of(date, annee, resourceBundle.getProperty("visitation"), Couleur.BLANC);
+		if(visitation.date.getDayOfWeek() == DayOfWeek.SUNDAY) {
+			return null;
+		}
+		return visitation;
+	}
+
+	public static DateLiturgique nativiteViergeMarie(int annee) {
+		MonthDay date = MonthDay.of(Month.SEPTEMBER, 8);
+		DateLiturgique nativiteViergeMarie = FeteFixe.of(date, annee, resourceBundle.getProperty("nativite.marie"), Couleur.BLANC);
+		if(nativiteViergeMarie.date.getDayOfWeek() == DayOfWeek.SUNDAY) {
+			return null;
+		}
+		return nativiteViergeMarie;
+	}
+
 	private static int algorithmeDeGauss(int annee) {
 		final int a = annee % 19;
 		final int b = annee % 4;
@@ -283,7 +298,7 @@ public class CalendrierLiturgique {
 		final int N = (4 + k - q) % 7;
 		final int d = (19 * a + M) % 30;
 		final int e = (2 * b + 4 * c + 6 * d + N) % 7;
-		
+
 		if(d == 29 && e == 6) {
 			return 19 + 31;
 		}
