@@ -108,6 +108,11 @@ public class CalendrierLiturgique {
 		return Fete.of(date, resourceBundle.getProperty("samedi.saint"), Couleur.VIOLET, DayOfWeek.SATURDAY);
 	}
 
+	public static DateLiturgique divineMisericorde(int annee) {
+		LocalDate date = datePaques(annee).plusWeeks(1);
+		return Dimanche.of(date, resourceBundle.getProperty("divine.misericorde"), Couleur.BLANC);
+	}
+
 	public static DateLiturgique ascension(int annee) {
 		LocalDate date = datePaques(annee).plusDays(39);
 		return Fete.of(date, resourceBundle.getProperty("ascension"), Couleur.BLANC, DayOfWeek.THURSDAY);
