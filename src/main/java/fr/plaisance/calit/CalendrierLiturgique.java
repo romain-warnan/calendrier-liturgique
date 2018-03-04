@@ -265,7 +265,7 @@ public class CalendrierLiturgique {
 
 	public static DateLiturgique transfiguration(int annee) {
 		MonthDay date = MonthDay.of(Month.AUGUST, 6);
-		return FeteFixe.of(date, annee, "Transfiguration", Couleur.BLANC);
+		return FeteFixe.of(date, annee, resourceBundle.getProperty("transfiguration"), Couleur.BLANC);
 	}
 
 	// de la Vierge Marie

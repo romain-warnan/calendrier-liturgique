@@ -20,10 +20,11 @@ public class CalendarBuilder {
 	private static List<String> calendarLines(List<DateLiturgique> dates) {
 		List<String> lines = new ArrayList<>();
 		lines.add("BEGIN:VCALENDAR");
-		lines.add("PRODID:-//Romain Warnan//Solennités catholiques//FR");
+		lines.add("PRODID:-//Romain Warnan//Solennités et fêtes catholiques//FR");
 		lines.add("VERSION:2.0");
 		lines.add("CALSCALE:GREGORIAN");
 		dates.stream()
+			.filter(date -> date != null)
 			.map(CalendarBuilder::eventLines)
 			.forEach(lines::addAll);
 		lines.add("END:VCALENDAR");

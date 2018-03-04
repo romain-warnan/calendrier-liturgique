@@ -13,7 +13,7 @@ public class CalendarBuilderTest {
 	@Test
 	public void calendar() throws IOException {
 		int annee = 2018;
-		List<DateLiturgique> solennites = Arrays.asList(
+		List<DateLiturgique> dateLiturgiques = Arrays.asList(
 			immaculeeConception(annee),
 			premierDimancheAvent(annee),
 			deuxiemeDimancheAvent(annee),
@@ -45,8 +45,16 @@ public class CalendarBuilderTest {
 			assomption(annee),
 			toussaint(annee),
 			jourDesMorts(annee),
-			christRoi(annee)
+			christRoi(annee),
+			// Fêtes
+			baptemeDuSeigneur(annee),
+			presentationAuTemple(annee),
+			sainteFamille(annee),
+			transfiguration(annee),
+			visitation(annee),
+			nativiteViergeMarie(annee)
 		);
-		CalendarBuilder.writeCalendar("docs/solennites-" + annee + ".ics", solennites);
+
+		CalendarBuilder.writeCalendar("docs/solennites-" + annee + ".ics", dateLiturgiques);
 	}
 }
