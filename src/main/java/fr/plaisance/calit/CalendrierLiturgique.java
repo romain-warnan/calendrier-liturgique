@@ -10,9 +10,41 @@ import java.time.*;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Properties;
 
+/**
+ * Ordre de préséance des fêtes simplifié :
+ * <ol>
+ * 	<li>Triduum pascal de la Passion et de la Résurrection du Seigneur.</li>
+ * 	<li>Nativité du Seigneur, Épiphanie, Ascension et Pentecôte. Dimanches de l’Avent, du Carême et de Pâques. Mercredi des Cendres. Jours de la semaine sainte, du lundi au jeudi inclus. Jours de l’octave de Pâques.</li>
+ * 	<li>Solennités du Seigneur, de la bienheureuse Vierge Marie, des saints inscrits au calendrier général. Commémoration de tous les fidèles défunts.</li>
+ * 	<li>Les fêtes du Seigneur inscrites au calendrier général.</li>
+ * 	<li>Les dimanches du temps de Noël et les dimanches du Temps ordinaire.</li>
+ * 	<li>Les fêtes de la bienheureuse Vierge Marie et des saints du calendrier général.</li>
+ * <ol/>
+ */
 public class CalendrierLiturgique {
 
 	private static final Properties resourceBundle = readProperties();
+
+	private static int algorithmeDeGauss(int annee) {
+		final int a = annee % 19;
+		final int b = annee % 4;
+		final int c = annee % 7;
+		final int k = annee / 100;
+		final int p = (13 + 8 * k) / 25;
+		final int q = k / 4;
+		final int M = (15 - p + k - q) % 30;
+		final int N = (4 + k - q) % 7;
+		final int d = (19 * a + M) % 30;
+		final int e = (2 * b + 4 * c + 6 * d + N) % 7;
+
+		if(d == 29 && e == 6) {
+			return 19 + 31;
+		}
+		if(d == 28 && e == 6 && (11 * M + 11) / 30 < 19) {
+			return 18 + 31;
+		}
+		return 22 + d + e;
+	}
 
 	private static Properties readProperties() {
 		String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
@@ -137,12 +169,6 @@ public class CalendrierLiturgique {
 		LocalDate date = datePaques(annee).plusWeeks(9).plusDays(5);
 		return DateLiturgique.of(date, resourceBundle.getProperty("sacre.coeur"), Couleur.BLANC);
 	}
-
-//	public static DateLiturgique christRoi(int annee) {
-//		LocalDate toussaint = toussaint(annee).date;
-//		LocalDate date = toussaint.with(TemporalAdjusters.previous(DayOfWeek.SUNDAY));
-//		return DateLiturgique.of(date, "Christ Roi", Couleur.BLANC);
-//	}
 
 	public static DateLiturgique christRoi(int annee) {
 		LocalDate date = dateQuatriemeDimancheAvent(annee).minusWeeks(4);
@@ -292,25 +318,5 @@ public class CalendrierLiturgique {
 		return nativiteViergeMarie;
 	}
 
-	private static int algorithmeDeGauss(int annee) {
-		final int a = annee % 19;
-		final int b = annee % 4;
-		final int c = annee % 7;
-		final int k = annee / 100;
-		final int p = (13 + 8 * k) / 25;
-		final int q = k / 4;
-		final int M = (15 - p + k - q) % 30;
-		final int N = (4 + k - q) % 7;
-		final int d = (19 * a + M) % 30;
-		final int e = (2 * b + 4 * c + 6 * d + N) % 7;
-
-		if(d == 29 && e == 6) {
-			return 19 + 31;
-		}
-		if(d == 28 && e == 6 && (11 * M + 11) / 30 < 19) {
-			return 18 + 31;
-		}
-		return 22 + d + e;
-	}
 
 }

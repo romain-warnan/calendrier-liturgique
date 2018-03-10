@@ -8,7 +8,7 @@ public class DateLiturgique {
 	enum Couleur {
 		VIOLET, ROSE, BLANC, VERT, ROUGE
 	}
-	
+
 	LocalDate date;
 	String libelle;
 	Couleur couleur;
