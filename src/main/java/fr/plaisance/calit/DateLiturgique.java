@@ -1,7 +1,12 @@
 package fr.plaisance.calit;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.MonthDay;
+import java.util.Properties;
 
 public class DateLiturgique {
 
@@ -13,17 +18,31 @@ public class DateLiturgique {
 	String libelle;
 	Couleur couleur;
 
+	private static final Properties resourceBundle = readProperties();
+
+	private static Properties readProperties() {
+		String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
+		String propertiesPath = rootPath + "app.properties";
+		Properties properties = new Properties();
+		try {
+			properties.load(new InputStreamReader(new FileInputStream(propertiesPath), StandardCharsets.UTF_8));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return properties;
+	}
+
 	private DateLiturgique(LocalDate date, String libelle, Couleur couleur) {
 		this.date = date;
 		this.libelle = libelle;
 		this.couleur = couleur;
 	}
 
-	static DateLiturgique of(LocalDate date, String libelle, Couleur couleur) {
-		return new DateLiturgique(date, libelle, couleur);
+	static DateLiturgique of(LocalDate date, String etiquette, Couleur couleur) {
+		return new DateLiturgique(date, resourceBundle.getProperty(etiquette), couleur);
 	}
 
-	static DateLiturgique fixe(MonthDay date, int annee, String libelle, Couleur couleur) {
-		return new DateLiturgique(date.atYear(annee), libelle, couleur);
+	static DateLiturgique fixe(MonthDay date, int annee, String etiquette, Couleur couleur) {
+		return new DateLiturgique(date.atYear(annee), resourceBundle.getProperty(etiquette), couleur);
 	}
 }
