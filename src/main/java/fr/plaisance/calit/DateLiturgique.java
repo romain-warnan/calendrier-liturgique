@@ -1,9 +1,9 @@
 package fr.plaisance.calit;
 
-import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.MonthDay;
 
-public abstract class DateLiturgique {
+public class DateLiturgique {
 
 	enum Couleur {
 		VIOLET, ROSE, BLANC, VERT, ROUGE
@@ -13,15 +13,17 @@ public abstract class DateLiturgique {
 	String libelle;
 	Couleur couleur;
 
-	protected DateLiturgique(LocalDate date, String libelle, Couleur couleur) {
+	private DateLiturgique(LocalDate date, String libelle, Couleur couleur) {
 		this.date = date;
 		this.libelle = libelle;
+		this.couleur = couleur;
 	}
-	
-	protected static void verifierJourDeLaSemaine(DayOfWeek expected, LocalDate date) {
-		DayOfWeek actual = date.getDayOfWeek();
-		if (expected != actual) {
-			throw new MauvaisJourException(expected, actual);
-		}
+
+	static DateLiturgique of(LocalDate date, String libelle, Couleur couleur) {
+		return new DateLiturgique(date, libelle, couleur);
+	}
+
+	static DateLiturgique fixe(MonthDay date, int annee, String libelle, Couleur couleur) {
+		return new DateLiturgique(date.atYear(annee), libelle, couleur);
 	}
 }

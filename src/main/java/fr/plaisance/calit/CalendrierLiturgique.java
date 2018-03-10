@@ -47,7 +47,7 @@ public class CalendrierLiturgique {
 
 	public static DateLiturgique paques(int annee) {
 		LocalDate date = datePaques(annee);
-		return Dimanche.of(date, resourceBundle.getProperty("paques"), Couleur.BLANC);
+		return DateLiturgique.of(date, resourceBundle.getProperty("paques"), Couleur.BLANC);
 	}
 
 	private static LocalDate datePaques(int annee) {
@@ -57,96 +57,96 @@ public class CalendrierLiturgique {
 
 	public static DateLiturgique cendres(int annee) {
 		LocalDate date = datePaques(annee).minusWeeks(6).minusDays(4);
-		return Fete.of(date, resourceBundle.getProperty("cendres"), Couleur.VIOLET, DayOfWeek.WEDNESDAY);
+		return DateLiturgique.of(date, resourceBundle.getProperty("cendres"), Couleur.VIOLET);
 	}
 
 	public static DateLiturgique premierDimancheCareme(int annee) {
 		LocalDate date = datePaques(annee).minusWeeks(6);
-		return Dimanche.of(date, resourceBundle.getProperty("careme.1"), Couleur.VIOLET);
+		return DateLiturgique.of(date, resourceBundle.getProperty("careme.1"), Couleur.VIOLET);
 	}
 
 	public static DateLiturgique deuxiemeDimancheCareme(int annee) {
 		LocalDate date = datePaques(annee).minusWeeks(5);
-		return Dimanche.of(date, resourceBundle.getProperty("careme.2"), Couleur.VIOLET);
+		return DateLiturgique.of(date, resourceBundle.getProperty("careme.2"), Couleur.VIOLET);
 	}
 
 	public static DateLiturgique troisiemeDimancheCareme(int annee) {
 		LocalDate date = datePaques(annee).minusWeeks(4);
-		return Dimanche.of(date, resourceBundle.getProperty("careme.3"), Couleur.VIOLET);
+		return DateLiturgique.of(date, resourceBundle.getProperty("careme.3"), Couleur.VIOLET);
 	}
 
 	public static DateLiturgique quatriemeDimancheCareme(int annee) {
 		LocalDate date = datePaques(annee).minusWeeks(3);
-		return Dimanche.of(date, resourceBundle.getProperty("careme.4"), Couleur.ROSE);
+		return DateLiturgique.of(date, resourceBundle.getProperty("careme.4"), Couleur.ROSE);
 	}
 
 	public static DateLiturgique cinquiemeDimancheCareme(int annee) {
 		LocalDate date = datePaques(annee).minusWeeks(2);
-		return Dimanche.of(date, resourceBundle.getProperty("careme.5"), Couleur.VIOLET);
+		return DateLiturgique.of(date, resourceBundle.getProperty("careme.5"), Couleur.VIOLET);
 	}
 
 	public static DateLiturgique rameaux(int annee) {
 		LocalDate date = datePaques(annee).minusWeeks(1);
-		return Dimanche.of(date, resourceBundle.getProperty("rameaux"), Couleur.ROUGE);
+		return DateLiturgique.of(date, resourceBundle.getProperty("rameaux"), Couleur.ROUGE);
 	}
 
 
 	public static DateLiturgique jeudiSaint(int annee) {
 		LocalDate date = datePaques(annee).minusDays(3);
-		return Fete.of(date, resourceBundle.getProperty("jeudi.saint"), Couleur.BLANC, DayOfWeek.THURSDAY);
+		return DateLiturgique.of(date, resourceBundle.getProperty("jeudi.saint"), Couleur.BLANC);
 	}
 
 
 	public static DateLiturgique vendrediSaint(int annee) {
 		LocalDate date = datePaques(annee).minusDays(2);
-		return Fete.of(date, resourceBundle.getProperty("vendredi.saint"), Couleur.ROUGE, DayOfWeek.FRIDAY);
+		return DateLiturgique.of(date, resourceBundle.getProperty("vendredi.saint"), Couleur.ROUGE);
 	}
 
 
 	public static DateLiturgique samediSaint(int annee) {
 		LocalDate date = datePaques(annee).minusDays(1);
-		return Fete.of(date, resourceBundle.getProperty("samedi.saint"), Couleur.VIOLET, DayOfWeek.SATURDAY);
+		return DateLiturgique.of(date, resourceBundle.getProperty("samedi.saint"), Couleur.VIOLET);
 	}
 
 	public static DateLiturgique divineMisericorde(int annee) {
 		LocalDate date = datePaques(annee).plusWeeks(1);
-		return Dimanche.of(date, resourceBundle.getProperty("divine.misericorde"), Couleur.BLANC);
+		return DateLiturgique.of(date, resourceBundle.getProperty("divine.misericorde"), Couleur.BLANC);
 	}
 
 	public static DateLiturgique ascension(int annee) {
 		LocalDate date = datePaques(annee).plusDays(39);
-		return Fete.of(date, resourceBundle.getProperty("ascension"), Couleur.BLANC, DayOfWeek.THURSDAY);
+		return DateLiturgique.of(date, resourceBundle.getProperty("ascension"), Couleur.BLANC);
 	}
 
 	public static DateLiturgique pentecote(int annee) {
 		LocalDate date = datePaques(annee).plusWeeks(7);
-		return Dimanche.of(date, resourceBundle.getProperty("pentecote"), Couleur.ROUGE);
+		return DateLiturgique.of(date, resourceBundle.getProperty("pentecote"), Couleur.ROUGE);
 	}
 
 	public static DateLiturgique sainteTrinite(int annee) {
 		LocalDate date = datePaques(annee).plusWeeks(8);
-		return Dimanche.of(date, resourceBundle.getProperty("sainte.trinite"), Couleur.BLANC);
+		return DateLiturgique.of(date, resourceBundle.getProperty("sainte.trinite"), Couleur.BLANC);
 	}
 
 	public static DateLiturgique feteDieu(int annee) {
 		LocalDate date = datePaques(annee).plusWeeks(9);
-		return Dimanche.of(date, resourceBundle.getProperty("fete.dieu"), Couleur.BLANC);
+		return DateLiturgique.of(date, resourceBundle.getProperty("fete.dieu"), Couleur.BLANC);
 	}
 
 	public static DateLiturgique sacreCoeur(int annee) {
 		LocalDate date = datePaques(annee).plusWeeks(9).plusDays(5);
-		return Fete.of(date, resourceBundle.getProperty("sacre.coeur"), Couleur.BLANC, DayOfWeek.FRIDAY);
+		return DateLiturgique.of(date, resourceBundle.getProperty("sacre.coeur"), Couleur.BLANC);
 	}
 
 //	public static DateLiturgique christRoi(int annee) {
 //		LocalDate toussaint = toussaint(annee).date;
 //		LocalDate date = toussaint.with(TemporalAdjusters.previous(DayOfWeek.SUNDAY));
-//		return Dimanche.of(date, "Christ Roi", Couleur.BLANC);
+//		return DateLiturgique.of(date, "Christ Roi", Couleur.BLANC);
 //	}
 
 	public static DateLiturgique christRoi(int annee) {
 		LocalDate date = dateQuatriemeDimancheAvent(annee).minusWeeks(4);
-		return Dimanche.of(date, resourceBundle.getProperty("christ.roi"), Couleur.BLANC);
+		return DateLiturgique.of(date, resourceBundle.getProperty("christ.roi"), Couleur.BLANC);
 	}
 
 	private static LocalDate dateQuatriemeDimancheAvent(int annee) {
@@ -156,22 +156,22 @@ public class CalendrierLiturgique {
 
 	public static DateLiturgique premierDimancheAvent(int annee) {
 		LocalDate date = dateQuatriemeDimancheAvent(annee).minusWeeks(3);
-		return Dimanche.of(date, resourceBundle.getProperty("avent.1"), Couleur.VIOLET);
+		return DateLiturgique.of(date, resourceBundle.getProperty("avent.1"), Couleur.VIOLET);
 	}
 
 	public static DateLiturgique deuxiemeDimancheAvent(int annee) {
 		LocalDate date = dateQuatriemeDimancheAvent(annee).minusWeeks(2);
-		return Dimanche.of(date, resourceBundle.getProperty("avent.2"), Couleur.VIOLET);
+		return DateLiturgique.of(date, resourceBundle.getProperty("avent.2"), Couleur.VIOLET);
 	}
 
 	public static DateLiturgique troisiemeDimancheAvent(int annee) {
 		LocalDate date = dateQuatriemeDimancheAvent(annee).minusWeeks(1);
-		return Dimanche.of(date, resourceBundle.getProperty("avent.3"), Couleur.ROSE);
+		return DateLiturgique.of(date, resourceBundle.getProperty("avent.3"), Couleur.ROSE);
 	}
 
 	public static DateLiturgique quatriemeDimancheAvent(int annee) {
 		LocalDate date = dateQuatriemeDimancheAvent(annee);
-		return Dimanche.of(date, resourceBundle.getProperty("avent.4"), Couleur.VIOLET);
+		return DateLiturgique.of(date, resourceBundle.getProperty("avent.4"), Couleur.VIOLET);
 	}
 
 	public static DateLiturgique immaculeeConception(int annee) {
@@ -179,7 +179,7 @@ public class CalendrierLiturgique {
 		if(date.getDayOfWeek() == DayOfWeek.SUNDAY) {
 			date = date.plusDays(1);
 		}
-		return Fete.of(date, resourceBundle.getProperty("immaculee.conception"), Couleur.BLANC);
+		return DateLiturgique.of(date, resourceBundle.getProperty("immaculee.conception"), Couleur.BLANC);
 	}
 
 	public static DateLiturgique saintJoseph(int annee) {
@@ -187,7 +187,7 @@ public class CalendrierLiturgique {
 		if(date.getDayOfWeek() == DayOfWeek.SUNDAY) {
 			date = date.plusDays(1);
 		}
-		return Fete.of(date, resourceBundle.getProperty("saint.joseph"), Couleur.BLANC);
+		return DateLiturgique.of(date, resourceBundle.getProperty("saint.joseph"), Couleur.BLANC);
 	}
 
 	public static DateLiturgique annonciation(int annee) {
@@ -199,51 +199,51 @@ public class CalendrierLiturgique {
 		else if(date.getDayOfWeek() == DayOfWeek.SUNDAY) {
 			date = date.plusDays(1);
 		}
-		return Fete.of(date, resourceBundle.getProperty("annonciation"), Couleur.BLANC);
+		return DateLiturgique.of(date, resourceBundle.getProperty("annonciation"), Couleur.BLANC);
 	}
 
 
 	public static DateLiturgique epiphanie(int annee) {
 		LocalDate date = LocalDate.of(annee, Month.JANUARY, 1).with(TemporalAdjusters.next(DayOfWeek.SUNDAY));
-		return Dimanche.of(date, resourceBundle.getProperty("epiphanie"), Couleur.BLANC);
+		return DateLiturgique.of(date, resourceBundle.getProperty("epiphanie"), Couleur.BLANC);
 	}
 
 
     public static DateLiturgique nativiteStJeanBaptiste(int annee) {
         MonthDay date = MonthDay.of(Month.JUNE, 24);
-        return FeteFixe.of(date, annee, resourceBundle.getProperty("nativite.de.saint.jean.baptiste"), Couleur.BLANC);
+        return DateLiturgique.fixe(date, annee, resourceBundle.getProperty("nativite.de.saint.jean.baptiste"), Couleur.BLANC);
     }
 
 
 	public static DateLiturgique sainteMarieMereDeDieu(int annee) {
 		MonthDay date = MonthDay.of(Month.JANUARY, 1);
-		return FeteFixe.of(date, annee, resourceBundle.getProperty("sainte.marie"), Couleur.BLANC);
+		return DateLiturgique.fixe(date, annee, resourceBundle.getProperty("sainte.marie"), Couleur.BLANC);
 	}
 
 	public static DateLiturgique assomption(int annee) {
 		MonthDay date = MonthDay.of(Month.AUGUST, 15);
-		return FeteFixe.of(date, annee, resourceBundle.getProperty("assomption"), Couleur.BLANC);
+		return DateLiturgique.fixe(date, annee, resourceBundle.getProperty("assomption"), Couleur.BLANC);
 	}
 
 	public static DateLiturgique toussaint(int annee) {
 		MonthDay date = MonthDay.of(Month.NOVEMBER, 1);
-		return FeteFixe.of(date, annee, resourceBundle.getProperty("toussaint"), Couleur.BLANC);
+		return DateLiturgique.fixe(date, annee, resourceBundle.getProperty("toussaint"), Couleur.BLANC);
 
 	}
 
 	public static DateLiturgique jourDesMorts(int annee) {
 		MonthDay date = MonthDay.of(Month.NOVEMBER, 2);
-		return FeteFixe.of(date, annee, resourceBundle.getProperty("jour.des.morts"), Couleur.VIOLET);
+		return DateLiturgique.fixe(date, annee, resourceBundle.getProperty("jour.des.morts"), Couleur.VIOLET);
 	}
 
 	public static DateLiturgique noel(int annee) {
 		MonthDay date = MonthDay.of(Month.DECEMBER, 25);
-		return FeteFixe.of(date, annee, resourceBundle.getProperty("noel"), Couleur.BLANC);
+		return DateLiturgique.fixe(date, annee, resourceBundle.getProperty("noel"), Couleur.BLANC);
 	}
 
     public static DateLiturgique saintsPierreEtPaul(int annee) {
         MonthDay date = MonthDay.of(Month.JUNE, 29);
-        return FeteFixe.of(date, annee, resourceBundle.getProperty("pierre.paul"), Couleur.ROUGE);
+        return DateLiturgique.fixe(date, annee, resourceBundle.getProperty("pierre.paul"), Couleur.ROUGE);
     }
 
     // Fêtes
@@ -253,30 +253,30 @@ public class CalendrierLiturgique {
 		LocalDate noel = noel(annee).date;
 		LocalDate dernierDimanche = LocalDate.of(annee, Month.DECEMBER, 1).with(TemporalAdjusters.lastInMonth(DayOfWeek.SUNDAY));
 		LocalDate date = noel.equals(dernierDimanche) ? MonthDay.of(Month.DECEMBER, 30).atYear(annee) : dernierDimanche;
-		return Fete.of(date, resourceBundle.getProperty("sainte.famille"), Couleur.BLANC);
+		return DateLiturgique.of(date, resourceBundle.getProperty("sainte.famille"), Couleur.BLANC);
 	}
 
 	public static DateLiturgique baptemeDuSeigneur(int annee) {
 		LocalDate date = epiphanie(annee).date.plusDays(1);
-		return Fete.of(date, resourceBundle.getProperty("bapteme.du.seigneur"), Couleur.BLANC);
+		return DateLiturgique.of(date, resourceBundle.getProperty("bapteme.du.seigneur"), Couleur.BLANC);
 	}
 
 	// Fêtes fixes
 	// du Seigneur
 	public static DateLiturgique presentationAuTemple(int annee) {
 		MonthDay date = MonthDay.of(Month.FEBRUARY, 2);
-		return FeteFixe.of(date, annee, resourceBundle.getProperty("presentation.au.temple"), Couleur.BLANC);
+		return DateLiturgique.fixe(date, annee, resourceBundle.getProperty("presentation.au.temple"), Couleur.BLANC);
 	}
 
 	public static DateLiturgique transfiguration(int annee) {
 		MonthDay date = MonthDay.of(Month.AUGUST, 6);
-		return FeteFixe.of(date, annee, resourceBundle.getProperty("transfiguration"), Couleur.BLANC);
+		return DateLiturgique.fixe(date, annee, resourceBundle.getProperty("transfiguration"), Couleur.BLANC);
 	}
 
 	// de la Vierge Marie
 	public static DateLiturgique visitation(int annee) {
 		MonthDay date = MonthDay.of(Month.MAY, 31);
-		DateLiturgique visitation = FeteFixe.of(date, annee, resourceBundle.getProperty("visitation"), Couleur.BLANC);
+		DateLiturgique visitation = DateLiturgique.fixe(date, annee, resourceBundle.getProperty("visitation"), Couleur.BLANC);
 		if(visitation.date.getDayOfWeek() == DayOfWeek.SUNDAY) {
 			return null;
 		}
@@ -285,7 +285,7 @@ public class CalendrierLiturgique {
 
 	public static DateLiturgique nativiteViergeMarie(int annee) {
 		MonthDay date = MonthDay.of(Month.SEPTEMBER, 8);
-		DateLiturgique nativiteViergeMarie = FeteFixe.of(date, annee, resourceBundle.getProperty("nativite.marie"), Couleur.BLANC);
+		DateLiturgique nativiteViergeMarie = DateLiturgique.fixe(date, annee, resourceBundle.getProperty("nativite.marie"), Couleur.BLANC);
 		if(nativiteViergeMarie.date.getDayOfWeek() == DayOfWeek.SUNDAY) {
 			return null;
 		}
