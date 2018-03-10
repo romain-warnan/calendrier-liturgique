@@ -9,44 +9,45 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
-public class CalendarBuilder {
+public class CalendrierFabrique {
 
-	public static void writeCalendar(String path, List<DateLiturgique> dates) throws IOException {
-		Files.write(Paths.get(path), calendarLines(dates), StandardCharsets.UTF_8);
+	public static void creerCalendrier(String path, List<DateLiturgique> dates) throws IOException {
+		Files.write(Paths.get(path), lignesCalendrier(dates), StandardCharsets.UTF_8);
 	}
 
-	private static List<String> calendarLines(List<DateLiturgique> dates) {
+	private static List<String> lignesCalendrier(List<DateLiturgique> dates) {
 		List<String> lines = new ArrayList<>();
 		lines.add("BEGIN:VCALENDAR");
 		lines.add("PRODID:-//Romain Warnan//Solennités et fêtes catholiques//FR");
 		lines.add("VERSION:2.0");
 		lines.add("CALSCALE:GREGORIAN");
 		dates.stream()
-			.filter(date -> date != null)
-			.map(CalendarBuilder::eventLines)
+			.filter(Objects::nonNull)
+			.map(CalendrierFabrique::lignesEvenement)
 			.forEach(lines::addAll);
 		lines.add("END:VCALENDAR");
 		return lines;
 	}
 
-	private static List<String> eventLines(DateLiturgique dateLiturgique) {
+	private static List<String> lignesEvenement(DateLiturgique dateLiturgique) {
 		List<String> lines = new ArrayList<>();
 		lines.add("BEGIN:VEVENT");
-		lines.add("DTSTART;VALUE=DATE:" + timestamp(dateLiturgique.date));
+		lines.add("DTSTART;VALUE=DATE:" + dateIso(dateLiturgique.date));
 		lines.add("SUMMARY:" + dateLiturgique.libelle);
 		lines.add("TRANSP:TRANSPARENT");
-		lines.add("UID:" + generateUid());
+		lines.add("UID:" + genererUID());
 		lines.add("END:VEVENT");
 		return lines;
 	}
 
-	private static String timestamp(LocalDate date) {
+	private static String dateIso(LocalDate date) {
 		return date.atStartOfDay(ZoneId.systemDefault()).format(DateTimeFormatter.BASIC_ISO_DATE);
 	}
 
-	private static String generateUid() {
+	private static String genererUID() {
 		return UUID.randomUUID().toString();
 	}
 }

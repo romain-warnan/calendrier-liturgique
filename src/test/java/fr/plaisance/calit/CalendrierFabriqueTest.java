@@ -8,7 +8,7 @@ import java.util.List;
 
 import static fr.plaisance.calit.CalendrierLiturgique.*;
 
-public class CalendarBuilderTest {
+public class CalendrierFabriqueTest {
 
 	@Test
 	public void calendar() throws IOException {
@@ -55,6 +55,6 @@ public class CalendarBuilderTest {
 			nativiteViergeMarie(annee)
 		);
 
-		CalendarBuilder.writeCalendar("docs/solennites-" + annee + ".ics", dateLiturgiques);
+		CalendrierFabrique.creerCalendrier("docs/solennites-" + annee + ".ics", dateLiturgiques);
 	}
 }
