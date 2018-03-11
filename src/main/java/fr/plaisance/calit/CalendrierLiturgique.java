@@ -15,10 +15,10 @@ import static fr.plaisance.calit.OutilsDate.datePaques;
  * <ol>
  * 	<li>Triduum pascal de la Passion et de la Résurrection du Seigneur.</li>
  * 	<li>Nativité du Seigneur, Épiphanie, Ascension et Pentecôte. Dimanches de l’Avent, du Carême et de Pâques. Mercredi des Cendres. Jours de la semaine sainte, du lundi au jeudi inclus. Jours de l’octave de Pâques.</li>
- * 	<li>Solennités du Seigneur, de la bienheureuse Vierge Marie, des saints inscrits au solennitesFetesDuSeigneurEtDeLaVierge général. Commémoration de tous les fidèles défunts.</li>
- * 	<li>Les fêtes du Seigneur inscrites au solennitesFetesDuSeigneurEtDeLaVierge général.</li>
+ * 	<li>Solennités du Seigneur, de la bienheureuse Vierge Marie, des saints inscrits au calendrier général. Commémoration de tous les fidèles défunts.</li>
+ * 	<li>Les fêtes du Seigneur inscrites au calendrier général.</li>
  * 	<li>Les dimanches du temps de Noël et les dimanches du Temps ordinaire.</li>
- * 	<li>Les fêtes de la bienheureuse Vierge Marie et des saints du solennitesFetesDuSeigneurEtDeLaVierge général.</li>
+ * 	<li>Les fêtes de la bienheureuse Vierge Marie et des saints du calendrier général.</li>
  * <ol/>
  */
 public class CalendrierLiturgique {
