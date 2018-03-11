@@ -29,6 +29,7 @@ public class Calendriers {
             vendrediSaint(annee),
             samediSaint(annee),
             paques(annee),
+            divineMisericorde(annee),
             annonciation(annee),
             ascension(annee),
             pentecote(annee),

@@ -20,6 +20,11 @@ public class OutilsDate {
         return largementEntre(date, paques.minusWeeks(1), paques);
     }
 
+    static boolean durantTempsPascal(LocalDate date) {
+        LocalDate paques = datePaques(date.getYear());
+        return largementEntre(date, paques, paques.plusWeeks(6));
+    }
+
     static LocalDate datePaques(int annee) {
         int joursDeMars = OutilsDate.algorithmeDeGauss(annee);
         return LocalDate.of(annee, Month.MARCH, 1).plusDays(joursDeMars - 1);
