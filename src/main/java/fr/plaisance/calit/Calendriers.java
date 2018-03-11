@@ -1,21 +1,13 @@
 package fr.plaisance.calit;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-import static fr.plaisance.calit.CalendrierFabrique.*;
 import static fr.plaisance.calit.CalendrierLiturgique.*;
 
 public class Calendriers {
 
-    public static void main(String[] args) throws IOException {
-        int annee = 2018;
-        final List<DateLiturgique> dates = solennitesFetesDuSeigneurEtDeLaVierge(annee);
-        creerCalendrier(String.format("docs/solennites-%d.ics", annee), dates);
-    }
-
-    private static List<DateLiturgique> solennitesFetesDuSeigneurEtDeLaVierge(int annee) {
+    static List<DateLiturgique> solennitesFetesDuSeigneurEtDeLaVierge(int annee) {
         return Arrays.asList(
             immaculeeConception(annee),
             premierDimancheAvent(annee),
