@@ -9,7 +9,6 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.UUID;
 
 public class CalendrierFabrique {
@@ -25,7 +24,6 @@ public class CalendrierFabrique {
 		lines.add("VERSION:2.0");
 		lines.add("CALSCALE:GREGORIAN");
 		dates.stream()
-			.filter(Objects::nonNull)
 			.map(CalendrierFabrique::lignesEvenement)
 			.forEach(lines::addAll);
 		lines.add("END:VCALENDAR");

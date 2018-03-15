@@ -47,6 +47,8 @@ import static fr.plaisance.calit.CalendrierLiturgique.visitation;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Calendriers {
 	
@@ -56,6 +58,9 @@ public class Calendriers {
 			for (int j = i + 1; j < calendrier.size(); j ++) {
 				DateLiturgique a = calendrier.get(i);
 				DateLiturgique b = calendrier.get(j);
+				if(b == null) {
+					System.out.println(j);
+				}
 				if(a.pasDeDate()) {
 					System.out.println(String.format("En %d, la fête '%s' de priorité [%d] n'a pas de date", annee, a.getLibelle(), a.getPriorite()));
 				}
@@ -116,6 +121,8 @@ public class Calendriers {
             transfiguration(annee),
             visitation(annee),
             nativiteViergeMarie(annee)
-        );
+        ).stream()
+		.filter(Objects::nonNull)
+		.collect(Collectors.toList());
     }
 }
