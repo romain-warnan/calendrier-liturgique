@@ -21,7 +21,7 @@ public class CalendrierFabrique {
 	private static List<String> lignesCalendrier(List<DateLiturgique> dates) {
 		List<String> lines = new ArrayList<>();
 		lines.add("BEGIN:VCALENDAR");
-		lines.add("PRODID:-//Romain Warnan//SolennitÃ©s et fÃªtes catholiques//FR");
+		lines.add("PRODID:-//Romain Warnan//Solennités et fêtes catholiques//FR");
 		lines.add("VERSION:2.0");
 		lines.add("CALSCALE:GREGORIAN");
 		dates.stream()
@@ -35,11 +35,11 @@ public class CalendrierFabrique {
 	private static List<String> lignesEvenement(DateLiturgique dateLiturgique) {
 		List<String> lines = new ArrayList<>();
 		lines.add("BEGIN:VEVENT");
-		lines.add("DTSTART;VALUE=DATE:" + dateIso(dateLiturgique.date));
-		lines.add("SUMMARY:" + dateLiturgique.libelle);
+		lines.add("DTSTART;VALUE=DATE:" + dateIso(dateLiturgique.getDate()));
+		lines.add("SUMMARY:" + dateLiturgique.getLibelle());
 		lines.add("TRANSP:TRANSPARENT");
 		lines.add("UID:" + genererUID());
-		lines.add("CATEGORIES:" + dateLiturgique.couleur);
+		lines.add("CATEGORIES:" + dateLiturgique.getCouleur());
 		lines.add("END:VEVENT");
 		return lines;
 	}

@@ -87,27 +87,27 @@ public class CalendrierLiturgique {
 	}
 	
 	public static DateLiturgique troisiemeDimanchePaques(int annee) {
-		LocalDate date = datePaques(annee).plusWeeks(1);
+		LocalDate date = datePaques(annee).plusWeeks(2);
 		return DateLiturgique.of(date, "paques.3", Couleur.BLANC, 2);
 	}
 	
 	public static DateLiturgique quatriemeDimanchePaques(int annee) {
-		LocalDate date = datePaques(annee).plusWeeks(1);
+		LocalDate date = datePaques(annee).plusWeeks(3);
 		return DateLiturgique.of(date, "paques.4", Couleur.BLANC, 2);
 	}
 	
 	public static DateLiturgique cinquiemeDimanchePaques(int annee) {
-		LocalDate date = datePaques(annee).plusWeeks(1);
+		LocalDate date = datePaques(annee).plusWeeks(4);
 		return DateLiturgique.of(date, "paques.5", Couleur.BLANC, 2);
 	}
 	
 	public static DateLiturgique sixiemeDimanchePaques(int annee) {
-		LocalDate date = datePaques(annee).plusWeeks(1);
+		LocalDate date = datePaques(annee).plusWeeks(5);
 		return DateLiturgique.of(date, "paques.6", Couleur.BLANC, 2);
 	}
 	
 	public static DateLiturgique septiemeDimanchePaques(int annee) {
-		LocalDate date = datePaques(annee).plusWeeks(1);
+		LocalDate date = datePaques(annee).plusWeeks(6);
 		return DateLiturgique.of(date, "paques.7", Couleur.BLANC, 2);
 	}
 
@@ -142,7 +142,7 @@ public class CalendrierLiturgique {
 	}
 
 	private static LocalDate dateQuatriemeDimancheAvent(int annee) {
-		LocalDate noel = noel(annee).date;
+		LocalDate noel = noel(annee).getDate();
 		return noel.with(TemporalAdjusters.previous(DayOfWeek.SUNDAY));
 	}
 
@@ -238,14 +238,14 @@ public class CalendrierLiturgique {
 
 	// Fêtes mobiles
 	public static DateLiturgique sainteFamille(int annee) {
-		LocalDate noel = noel(annee).date;
+		LocalDate noel = noel(annee).getDate();
 		LocalDate dernierDimanche = LocalDate.of(annee, Month.DECEMBER, 1).with(TemporalAdjusters.lastInMonth(DayOfWeek.SUNDAY));
 		LocalDate date = noel.equals(dernierDimanche) ? MonthDay.of(Month.DECEMBER, 30).atYear(annee) : dernierDimanche;
 		return DateLiturgique.of(date, "sainte.famille", Couleur.BLANC, 4);
 	}
 
 	public static DateLiturgique baptemeDuSeigneur(int annee) {
-		LocalDate date = epiphanie(annee).date.plusDays(1);
+		LocalDate date = epiphanie(annee).getDate().plusDays(1);
 		return DateLiturgique.of(date, "bapteme.du.seigneur", Couleur.BLANC, 4);
 	}
 
@@ -265,7 +265,7 @@ public class CalendrierLiturgique {
 	public static DateLiturgique visitation(int annee) {
 		MonthDay date = MonthDay.of(Month.MAY, 31);
 		DateLiturgique visitation = DateLiturgique.fixe(date, annee, "visitation", Couleur.BLANC, 6);
-		if(visitation.date.getDayOfWeek() == DayOfWeek.SUNDAY) {
+		if(visitation.getDate().getDayOfWeek() == DayOfWeek.SUNDAY) {
 			return null;
 		}
 		return visitation;
@@ -274,7 +274,7 @@ public class CalendrierLiturgique {
 	public static DateLiturgique nativiteViergeMarie(int annee) {
 		MonthDay date = MonthDay.of(Month.SEPTEMBER, 8);
 		DateLiturgique nativiteViergeMarie = DateLiturgique.fixe(date, annee, "nativite.marie", Couleur.BLANC, 6);
-		if(nativiteViergeMarie.date.getDayOfWeek() == DayOfWeek.SUNDAY) {
+		if(nativiteViergeMarie.getDate().getDayOfWeek() == DayOfWeek.SUNDAY) {
 			return null;
 		}
 		return nativiteViergeMarie;
