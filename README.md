@@ -17,7 +17,13 @@ Le calendrier contient :
 
 Cela conduit à un total de 43 évènements au plus.
 
+## Calendrier liturgique tridentin
+
+[Ordo](http://laportelatine.org/accueil/Ordo/ordo.php)
+
 ## Ordre de préséance des fêtes
+
+[Source](http://croire.la-croix.com/Paroisses/Ressources/Calendrier-liturgique/Ordre-de-preseance-des-fetes)
 
 1. Triduum pascal de la Passion et de la Résurrection du Seigneur.
 
