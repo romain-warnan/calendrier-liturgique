@@ -17,6 +17,7 @@ public class DateLiturgique {
 	LocalDate date;
 	String libelle;
 	Couleur couleur;
+	Integer priorite;
 
 	private static final Properties resourceBundle = readProperties();
 
@@ -32,17 +33,18 @@ public class DateLiturgique {
 		return properties;
 	}
 
-	private DateLiturgique(LocalDate date, String libelle, Couleur couleur) {
+	private DateLiturgique(LocalDate date, String libelle, Couleur couleur, Integer priorite) {
 		this.date = date;
 		this.libelle = libelle;
 		this.couleur = couleur;
+		this.priorite = priorite;
 	}
 
-	static DateLiturgique of(LocalDate date, String etiquette, Couleur couleur) {
-		return new DateLiturgique(date, resourceBundle.getProperty(etiquette), couleur);
+	static DateLiturgique of(LocalDate date, String etiquette, Couleur couleur, Integer priorite) {
+		return new DateLiturgique(date, resourceBundle.getProperty(etiquette), couleur, priorite);
 	}
 
-	static DateLiturgique fixe(MonthDay date, int annee, String etiquette, Couleur couleur) {
-		return new DateLiturgique(date.atYear(annee), resourceBundle.getProperty(etiquette), couleur);
+	static DateLiturgique fixe(MonthDay date, int annee, String etiquette, Couleur couleur, Integer priorite) {
+		return new DateLiturgique(date.atYear(annee), resourceBundle.getProperty(etiquette), couleur, priorite);
 	}
 }

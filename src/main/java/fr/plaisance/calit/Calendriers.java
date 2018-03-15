@@ -30,6 +30,11 @@ public class Calendriers {
             samediSaint(annee),
             paques(annee),
             divineMisericorde(annee),
+            troisiemeDimanchePaques(annee),
+            quatriemeDimanchePaques(annee),
+            cinquiemeDimanchePaques(annee),
+            sixiemeDimanchePaques(annee),
+            septiemeDimanchePaques(annee),
             annonciation(annee),
             ascension(annee),
             pentecote(annee),
@@ -42,7 +47,7 @@ public class Calendriers {
             toussaint(annee),
             jourDesMorts(annee),
             christRoi(annee),
-            // FÃªtes
+            // Fêtes
             baptemeDuSeigneur(annee),
             presentationAuTemple(annee),
             sainteFamille(annee),
