@@ -6,7 +6,7 @@ import java.util.List;
 import static fr.plaisance.calit.CalendrierFabrique.creerCalendrier;
 import static fr.plaisance.calit.Calendriers.solennitesFetesDuSeigneurEtDeLaVierge;
 
-public class Main {
+public class FabricationCalendriers {
 
     public static void main(String[] args) throws IOException {
         int annee = 2018;

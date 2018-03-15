@@ -7,6 +7,7 @@ import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.MonthDay;
+import java.util.Arrays;
 import java.util.Properties;
 
 public class DateLiturgique {
@@ -48,13 +49,9 @@ public class DateLiturgique {
 	static DateLiturgique fixe(MonthDay date, int annee, String etiquette, Couleur couleur, Integer priorite) {
 		return new DateLiturgique(date.atYear(annee), resourceBundle.getProperty(etiquette), couleur, priorite);
 	}
-
-	boolean pasDeDate() {
-		return this.date == null;
-	}
 	
-	boolean memeJourQue(DateLiturgique other) {
-		return this.date.isEqual(other.date);
+	boolean memeJourQue(DateLiturgique... dates) {
+		return Arrays.stream(dates).anyMatch(d -> this.date.isEqual(d.date));
 	}
 
 	public LocalDate getDate() {

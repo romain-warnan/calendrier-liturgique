@@ -179,7 +179,11 @@ public class CalendrierLiturgique {
 		if(date.getDayOfWeek() == DayOfWeek.SUNDAY) {
 			date = date.plusDays(1);
 		}
-		return DateLiturgique.of(date, "saint.joseph", Couleur.BLANC, 3);
+		DateLiturgique saintJoseph = DateLiturgique.of(date, "saint.joseph", Couleur.BLANC, 3);
+		if(saintJoseph.memeJourQue(jeudiSaint(annee))) {
+			saintJoseph.setDate(LocalDate.of(annee, Month.MARCH, 14));
+		}
+		return saintJoseph;
 	}
 
 	public static DateLiturgique annonciation(int annee) {
@@ -201,7 +205,11 @@ public class CalendrierLiturgique {
 
     public static DateLiturgique nativiteStJeanBaptiste(int annee) {
         MonthDay date = MonthDay.of(Month.JUNE, 24);
-        return DateLiturgique.fixe(date, annee, "nativite.de.saint.jean.baptiste", Couleur.BLANC, 3);
+		DateLiturgique nativiteStJeanBaptiste =  DateLiturgique.fixe(date, annee, "nativite.de.saint.jean.baptiste", Couleur.BLANC, 3);
+		if (nativiteStJeanBaptiste.memeJourQue(sacreCoeur(annee), feteDieu(annee))) {
+			return null;
+		}
+		return nativiteStJeanBaptiste;
     }
 
 	public static DateLiturgique sainteMarieMereDeDieu(int annee) {
@@ -231,7 +239,11 @@ public class CalendrierLiturgique {
 
     public static DateLiturgique saintsPierreEtPaul(int annee) {
         MonthDay date = MonthDay.of(Month.JUNE, 29);
-        return DateLiturgique.fixe(date, annee, "pierre.paul", Couleur.ROUGE, 3);
+		DateLiturgique saintsPierreEtPaul =  DateLiturgique.fixe(date, annee, "pierre.paul", Couleur.ROUGE, 3);
+		if (saintsPierreEtPaul.memeJourQue(sacreCoeur(annee))) {
+			return null;
+		}
+		return saintsPierreEtPaul;
     }
 
     // Fêtes
@@ -266,6 +278,9 @@ public class CalendrierLiturgique {
 		MonthDay date = MonthDay.of(Month.MAY, 31);
 		DateLiturgique visitation = DateLiturgique.fixe(date, annee, "visitation", Couleur.BLANC, 6);
 		if(visitation.getDate().getDayOfWeek() == DayOfWeek.SUNDAY) {
+			return null;
+		}
+		if (visitation.memeJourQue(ascension(annee), sacreCoeur(annee))) {
 			return null;
 		}
 		return visitation;
