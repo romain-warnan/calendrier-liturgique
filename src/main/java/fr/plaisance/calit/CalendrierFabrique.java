@@ -39,6 +39,7 @@ public class CalendrierFabrique {
 		lines.add("SUMMARY:" + dateLiturgique.libelle);
 		lines.add("TRANSP:TRANSPARENT");
 		lines.add("UID:" + genererUID());
+		lines.add("CATEGORIES:" + dateLiturgique.couleur);
 		lines.add("END:VEVENT");
 		return lines;
 	}
