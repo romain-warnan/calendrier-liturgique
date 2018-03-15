@@ -107,6 +107,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20180330+0200
 SUMMARY:Vendredi Saint (La Passion)
+ATTACH;FMTTYPE=image/jpg:https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Dirk_van_Baburen_-_Kroning_met_de_doornenkroon.jpg/1024px-Dirk_van_Baburen_-_Kroning_met_de_doornenkroon.jpg
 TRANSP:TRANSPARENT
 UID:fa4a1d32-8556-4bb5-ac0c-ffa51b3a7441
 END:VEVENT
