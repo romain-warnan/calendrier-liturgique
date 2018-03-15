@@ -1,16 +1,20 @@
 package fr.plaisance.calit;
 
 import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
+import java.util.stream.IntStream;
 
 import static fr.plaisance.calit.CalendrierFabrique.creerCalendrier;
-import static fr.plaisance.calit.Calendriers.solennitesFetesDuSeigneurEtDeLaVierge;
+import static java.util.stream.Collectors.toList;
 
 public class FabricationCalendriers {
 
     public static void main(String[] args) throws IOException {
-        int annee = 2018;
-        final List<DateLiturgique> dates = solennitesFetesDuSeigneurEtDeLaVierge(annee);
-        creerCalendrier(String.format("docs/solennites-%d.ics", annee), dates);
+        final List<DateLiturgique> dates = IntStream.range(1900, 2100)
+            .mapToObj(Calendriers::solennitesFetesDuSeigneurEtDeLaVierge)
+            .flatMap(Collection::stream)
+            .collect(toList());
+        creerCalendrier("docs/calendrier-liturgique-catholique.ics", dates);
     }
 }

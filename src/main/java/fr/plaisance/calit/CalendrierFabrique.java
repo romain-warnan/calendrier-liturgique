@@ -20,7 +20,7 @@ public class CalendrierFabrique {
 	private static List<String> lignesCalendrier(List<DateLiturgique> dates) {
 		List<String> lines = new ArrayList<>();
 		lines.add("BEGIN:VCALENDAR");
-		lines.add("PRODID:-//Romain Warnan//Solennités et fêtes catholiques//FR");
+		lines.add("PRODID:-//Romain Warnan//SolennitÃ©s et fÃªtes catholiques//FR");
 		lines.add("VERSION:2.0");
 		lines.add("CALSCALE:GREGORIAN");
 		dates.stream()
