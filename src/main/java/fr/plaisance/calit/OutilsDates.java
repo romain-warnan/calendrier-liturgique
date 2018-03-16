@@ -3,7 +3,7 @@ package fr.plaisance.calit;
 import java.time.LocalDate;
 import java.time.Month;
 
-public class OutilsDate {
+public class OutilsDates {
 
     static boolean durantTriduumPascal(LocalDate date) {
         LocalDate paques = datePaques(date.getYear());
@@ -26,7 +26,7 @@ public class OutilsDate {
     }
 
     static LocalDate datePaques(int annee) {
-        int joursDeMars = OutilsDate.algorithmeDeGauss(annee);
+        int joursDeMars = OutilsDates.algorithmeDeGauss(annee);
         return LocalDate.of(annee, Month.MARCH, 1).plusDays(joursDeMars - 1);
     }
 

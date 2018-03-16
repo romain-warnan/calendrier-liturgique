@@ -8,7 +8,7 @@ import java.time.Month;
 import java.time.MonthDay;
 import java.time.temporal.TemporalAdjusters;
 
-import static fr.plaisance.calit.OutilsDate.datePaques;
+import static fr.plaisance.calit.OutilsDates.datePaques;
 
 /**
  * Ordre de préséance des fêtes simplifié :
