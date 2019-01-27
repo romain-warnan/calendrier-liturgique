@@ -4,6 +4,8 @@
 
 `https://romain-warnan.github.io/calendrier-liturgique/calendrier-liturgique-catholique.ics`
 
+[Aperçu du calendrier](https://romain-warnan.github.io/calendrier-liturgique)
+
 Le calendrier contient :
  - le _triduum_ pascal,
  - le mercredi des cendres,
