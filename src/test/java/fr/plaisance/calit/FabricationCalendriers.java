@@ -15,6 +15,6 @@ public class FabricationCalendriers {
             .mapToObj(Calendriers::solennitesFetesDuSeigneurEtDeLaVierge)
             .flatMap(Collection::stream)
             .collect(toList());
-        creerCalendrier("docs/calendrier-liturgique-catholique.ics", dates);
+        creerCalendrier("docs/calendrier-liturgique-catholique-romain.ics", dates);
     }
 }
