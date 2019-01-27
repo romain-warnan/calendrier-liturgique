@@ -257,7 +257,14 @@ public class CalendrierLiturgique {
 	}
 
 	public static DateLiturgique baptemeDuSeigneur(int annee) {
-		LocalDate date = epiphanie(annee).getDate().plusDays(1);
+		LocalDate epiphanie = epiphanie(annee).getDate();
+		LocalDate date = null;
+		if(epiphanie.equals(LocalDate.of(annee, Month.JANUARY, 7)) || epiphanie.equals(LocalDate.of(annee, Month.JANUARY, 8))) {
+			date = epiphanie.plusDays(1);
+		}
+		else {
+			date = epiphanie.plusWeeks(1);
+		}
 		return DateLiturgique.of(date, "bapteme.du.seigneur", Couleur.BLANC, 4);
 	}
 

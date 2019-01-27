@@ -246,17 +246,24 @@ public class CalendrierLiturgiqueTest {
 	}
 
 	@Test
-	public void epiphanie() {
+	public void epiphanie2018() {
 		int annee = 2018;
 		DateLiturgique date = CalendrierLiturgique.epiphanie(annee);
 		assertThat(date.getDate()).isEqualTo(LocalDate.of(annee, Month.JANUARY, 7));
 	}
 
 	@Test
-	public void baptmemeDuSeigneur() {
+	public void baptmemeDuSeigneur2018() {
 		int annee = 2018;
 		DateLiturgique date = CalendrierLiturgique.baptemeDuSeigneur(annee);
 		assertThat(date.getDate()).isEqualTo(LocalDate.of(annee, Month.JANUARY, 8));
+	}
+	
+	@Test
+	public void baptmemeDuSeigneur2019() {
+		int annee = 2019;
+		DateLiturgique date = CalendrierLiturgique.baptemeDuSeigneur(annee);
+		assertThat(date.getDate()).isEqualTo(LocalDate.of(annee, Month.JANUARY, 13));
 	}
 
 	@Test
