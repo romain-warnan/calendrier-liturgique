@@ -44,3 +44,80 @@ Voui, vous êtes l’ami de prédilection et le père nourricier de Jésus.
 Je vous confie mon âme, nourrissez-la des vertus que vous avez pratiquées.
 Faites-moi éviter le trouble et l’agitation.
 Enseignez-moi l’unique nécessaire et obtenez-moi les grâces que je demande au Cœur Sacré de Jésus.
+
+## Sixième jour
+
+Le saint Évangile nous dit encore que Jésus aimait Marie-Madeleine.
+Cette illustre Sainte a arrosé des larmes du repentir les pieds de Jésus.
+Vous, ô saint Joseph, vous les avez arrosés des larmes de tendresse.
+Madeleine lui a prodigué ses parfums, vous lui avez prodigué vos suers et vos peines.
+Madeleine a baisé les pieds de Jésus, et vous, ô saint Joseph, vous avej baisés ses innocentes mains et son fron serein ; vous l’avez pressé contre votre cœur.
+Madeleine le cherchait, après sa mort, pendant qu’il vous visitait dans les limbes.
+
+Ô ami par excellence du Cœur de Jésus obtenez-moi le pardon de mes pécéhés, des larmes de repentir et d’amour.
+Que je travaille désormais pour la gloire de ce Cœur Sacré et l’avènement de son règne.
+Daignez m’obtenir aussi les grâces que je demande pendant cette neuvaine.
+
+## Septième jour
+
+Je ne vous appellerai plus serviteurs, disait Jésus à ses apôtres, mais je vous appellerai « mes amis », parce que le serviteur ne sait pas ce que fait son maître.
+À vous j’ai fait connaître tout ce que j’ai appris de mon Père.
+Ô glorieux saint Joseph, vous avz connu avant les apôtre le grand mystère de l’Incarnation.
+Que de secrets après celui-là Jésus ne vous a-t-il pas révélés !
+Comme les apôtres, vous êtes allé porter le Sauveur aux nations étrangères, au péril de votre vie.
+Avec Marie vous avez été le premier missionnaire du Sacré-Cœur.
+Vous avez été le martyr secret et inconnu du secret de l’Incarnation et vous êtes mort d’amour pour Jésus.
+
+Saint Joseph, rendez-moi, en quelque manière votre imitateur.
+Nous pous tous être plus ou moins les missionnaires du Sacré-Cœur.
+Embrasez mon cœur du feu de votre zèle et de votre amour pour le divin Cœur.
+Je vous demande de nouveau la grâce particulière de cette neuvaine.
+
+## Huitième jour
+
+L’Exode nous dit : « Le Seigneur parlait à Moïse face à face comme un homme a coutume de parler à son ami. »
+
+Le Verbe fait chair vous parlait véritablement face à face, ô grand saint Joseph !
+Il ne vous parlait sous une forme mystérieuse et empruntée.
+Il vous parlait « comme un ami à son ami », bien plus, comme un enfant à son père.
+Il parlait à votre oreille, à votre cœur.
+
+Moïse a conduit le peuple danse le désert et vous, ô Joseph, vous y avez conduit et protégé Jésus et Marie.
+La Loi, dit l’apôtre, a été donnée par Moïse et la grâce par Jésus-Christ.
+
+Ô saint modèle et patron des amis du Sacré-Cœur, apprenez-moi à converser avec Jésus.
+Obtenez-moi l’esprit d’oraison, l’esprit véritablement intérieur et la plus grande fidélité à la loi du Seigneur.
+Apprenez-moi à aimer Dieu et le prochain ; c’est là toute la loi.
+Daignez m’obtenir aussi les grâces que je demande pendant cette neuvaine.
+
+## Neuvième jour
+
+Ô saint Joseph, si je cherchais dans l’Ancien Testament et dans le Nouveau tous les sainsts qui ont été les amis de Dieu ; si je relisais la vie de tous les bienheureux qui ont illustré l’Église catholique ; je pourrais dire avec sainte Thérèse, votre fidèle servante, que vous les surpassez tous par les soins que vous rendus à Jésus et à Marie, par votre diginité ett par le grand nombre de grâces que vous pouvez nous accorder et par la place que vous occupez dans le ciel.
+
+Aussi je me jette à vos pieds et vous demande toutes les grâces spirituelles et temporelles que vous savez m’être nécessaires.
+Je vous confie le soin de mon âme et de mon corps, de ma vie intérieure et extérieure, de la durée de mon existence et du moment de ma mort.
+Je désire être à votre exemple un ami du Cœur de Jésus, un ami de Notre Dame du Sacré-Cœure, un ami de vous-même.
+
+Jésus, Marie, Joseph ! ô doux noms, soyez toujours sur mes lèvres !
+
+Que je les chante ici-bas dans les jours de mon pèlerinage, que je les chante en quittant l’exil ! que je les chante à jamais dans l’éternelle Patrie !
+Amen.
+
+## Prière à Saint Joseph
+
+Ô glorieux Saint Joseph, qui pendant votre agonie et au moment de votre mort avez eu le bonheur d’être assisté par Jésus et Marie, obtenez la même faveur aux agonisants.
+Je vous le demande aussi pour moi et pour les miens quand nous serans à l’agonie.
+Daignez alors plus que jamais vous souvenir de nous, ô grand Saint, et par votre puissante protection nous obtenir la grâce d’expirer paisiblement comme vous entre les bras de Jésus et de Marie.
+Amen.
+
+*Cum approbatione ecclesiastica Mechlinae* 12 avril 1963
+
+### À dire chaque jour
+
+Glorieux Saint Joseph, époux de Marie, accorez-nous votre protection paternelle, nous vous en supplions par le Cœur de Jésus-Christ.
+
+Ô vous dont la puissance infinie s’étend à toutes nos nécessités et sait nous rendre possibles les choses les plus impossibles, ouvrez vos yeux de Père sur les intérêts de vos enfants.
+Dans l’embarras et la peine qui nous pressent, nous recourons à vous avec confiance.
+Daignez prendre sous votre charitable conduite cette affaire importante et difficile, cause de nos inquiétudes.
+Faites que son heureuse issue tourne à la gloire de Dieu et au bien de ses dévoués serviteurs. Ainsi soit-il.
+(Saint François de Sales)
