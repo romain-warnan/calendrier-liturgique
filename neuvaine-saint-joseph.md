@@ -1,5 +1,32 @@
 # Neuvaine à Saint Joseph
 
+## Premier jour
+
+Glorieux et aimable Joseph, je viens vous invoquer pendant neuf jours sous un titre qui vous est cher.
+Vous avez beaucoup aimé le Cœur le Jésus et ce divin Cœur vous a infiniment aimé ; vous en êtes vraiment l’ami par excellence.
+Autre est la clarté du soleil, autre la clarté de la lune, et une étoile diffère d’une autre en éclat.
+Ainsi les saints diffèrent entre eux.
+Tous furent les amis de Cœur de Jésus, mais vous l’avez été plus qu’eux tous, après la Bienheureuse Vierge Marie.
+Aussi tous s’inclinent devant vous. L’ancien Joseph vit le soleil, la lune et onze étoiles l’adorer.
+Or Jésus, Soleil de Justice, Marie, douce comme la lune, les apôtres et les saints, brillants comme des étoiles, se sont inclinés devant vous.
+
+Je me joins à eux, ô Joseph, je vous salue, ô doux modèle et patron et vous prie de m’accorder ce que je vous demande pendant cette neuvaine.
+
+Saint Joseph, modèle et patron des amis du Sacré-Cœur, priez pour nous.
+
+## Deuxième jour
+
+Saint Jean, le disciple bien-aimé, fut choisi par Jésus pour su pureté virginale ; il a reposé sa tête sur Cœur sacré ; il a été le gardien de la plus pure des vierges et de Jésus lui-même.
+Ô aimable saint Joseph, ce que saint Jean n’a fait qu’une fois vous l’avez fait bien souvent.
+Jésus aussi a reposé sa tête innocente sur votre cœur si pur.
+Marie, la Vierge Immaculée, vous a été confiée pendant de longues années.
+
+Oh ! penchez-vous encore sur le Cœur de Jésus, et, vous unissant à Notre-Dame du Sacré-Cœur, demandez à notre divin modèle de me rendre doux et humble de cœur.
+Obtenez-moi de lui ce que je vous demande pendant cette neuvaine.
+
+Saint Joseph, priez pour nous.
+
+
 ## Troisème jour
 
 Le précurseur du Messie, saint Jean-Baptist, s’est appelé « l’ami de l’Époux ».
