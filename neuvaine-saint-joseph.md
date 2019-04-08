@@ -1,23 +1,21 @@
 # Neuvaine à Saint Joseph
 
 ## Premier jour
-
 Glorieux et aimable Joseph, je viens vous invoquer pendant neuf jours sous un titre qui vous est cher. Vous avez beaucoup aimé le Cœur le Jésus et ce divin Cœur vous a infiniment aimé ; vous en êtes vraiment l’ami par excellence. Autre est la clarté du soleil, autre la clarté de la lune, et une étoile diffère d’une autre en éclat. Ainsi les saints diffèrent entre eux. Tous furent les amis de Cœur de Jésus, mais vous l’avez été plus qu’eux tous, après la Bienheureuse Vierge Marie. Aussi tous s’inclinent devant vous. L’ancien Joseph vit le soleil, la lune et onze étoiles l’adorer. Or Jésus, Soleil de Justice, Marie, douce comme la lune, les apôtres et les saints, brillants comme des étoiles, se sont inclinés devant vous.
 Je me joins à eux, ô Joseph, je vous salue, ô doux modèle et patron et vous prie de m’accorder ce que je vous demande pendant cette neuvaine.
 Saint Joseph, modèle et patron des amis du Sacré-Cœur, priez pour nous.
-Deuxième jour
+
+## Deuxième jour
 Saint Jean, le disciple bien-aimé, fut choisi par Jésus pour su pureté virginale ; il a reposé sa tête sur Cœur sacré ; il a été le gardien de la plus pure des vierges et de Jésus lui-même. Ô aimable saint Joseph, ce que saint Jean n’a fait qu’une fois vous l’avez fait bien souvent. Jésus aussi a reposé sa tête innocente sur votre cœur si pur. Marie, la Vierge Immaculée, vous a été confiée pendant de longues années.
 Oh ! penchez-vous encore sur le Cœur de Jésus, et, vous unissant à Notre-Dame du Sacré-Cœur, demandez à notre divin modèle de me rendre doux et humble de cœur. Obtenez-moi de lui ce que je vous demande pendant cette neuvaine.
 Saint Joseph, priez pour nous.
 
 ## Troisième jour
-
 Le précurseur du Messie, saint Jean-Baptiste, s’est appelé « l’ami de l’Époux ». Il a prêché dans le désert et a annoncé le Sauver. Il a été un modèle de mortification. Vous, ô glorieux saint Joseph, vous avez été « l’ami de l’Époux et de l’Épouse ». Vous avez vécu avec eux. Vous avez porté Jésus dans vos bras, dans les déserts de l’Égypte ! Vous avez pratiqué une mortification continuelle et vous avez prêché par un silence éloquent.
 Rendez-moi, ô bienheureux Père, l’ami de Jésus et de Marie, l’ami de la mortification et du silence. Accordez-moi ce que mon cœur désire, toujours conformément à la volonté de Dieu que vous avez si parfaitement accomplie.
 Saint Joseph, priez pour nous.
 
 ## Quatrième jour
-
 Jésus a appelé Lazare son ami. Lazare a reçu plusieurs fois Jésus à Béthanie. Vous, ô saint Joseph, vous l’avez gardé pendant plusieurs années. Jésus n’était pas à la mort de Lazare : il était loin ; mais il a assisté à la vôtre, vous donnant la main dans le passage du temps à l’éternité. Il a ressuscité Lazare et nous croyons pieusement, quoique ce ne soit pas de foi, que vous êtes en corps et en âme dans le ciel.
 Ô ami privilégié de Jésus, faites-moi vivre en union avec lui. Qu’il habite toujours avec moi par la foi et par la grâce.
 Qu’il ne m’abandonne pas à l’heure de la mort.
