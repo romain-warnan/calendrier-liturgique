@@ -176,14 +176,13 @@ public class CalendrierLiturgique {
 
 	public static DateLiturgique saintJoseph(int annee) {
 		LocalDate date = LocalDate.of(annee, Month.MARCH, 19);
-		if(date.getDayOfWeek() == DayOfWeek.SUNDAY) {
+		if(OutilsDate.durantSemaineSainte(date)) {
+			date = rameaux(annee).getDate().with(TemporalAdjusters.previous(DayOfWeek.SATURDAY));
+		}
+		else if(date.getDayOfWeek() == DayOfWeek.SUNDAY) {
 			date = date.plusDays(1);
 		}
-		DateLiturgique saintJoseph = DateLiturgique.of(date, "saint.joseph", Couleur.BLANC, 3);
-		if(saintJoseph.memeJourQue(jeudiSaint(annee))) {
-			saintJoseph.setDate(LocalDate.of(annee, Month.MARCH, 14));
-		}
-		return saintJoseph;
+		return DateLiturgique.of(date, "saint.joseph", Couleur.BLANC, 3);
 	}
 
 	public static DateLiturgique annonciation(int annee) {
